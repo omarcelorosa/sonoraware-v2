@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* representa o nível principal do documento usado para criar variáveis CSS 
+    assim quando precisarmos da cor no futuro não tenha que colocar o código dela
+    coloca por exemplo --cor-fundo*/
+    --cor-fundo: #020817;
+    --cor-fundo-secundaria: #071426;
+
+    --cor-azul: #00bfff;
+    --cor-roxa: #8a2be2;
+    --cor-rosa: #ff00c8;
+
+    --cor-texto: #ffffff;
+    --cor-texto-secundario: #aab7cf;
+
+    --cor-borda: #1e4f91;
+}
+
+body {
+    min-height: 100vh;
+
+    background-color: var(--cor-fundo);
+
+    background-image: url("../assets/images/backgrounds/background.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: var(--cor-texto);
+    font-family: Arial, sans-serif;
+}

@@ -1,0 +1,99 @@
+.header {
+    width: calc(100% - 80px);
+    height: 72px;
+    display: flex;
+    align-items: center;
+    margin: 20px auto 0;
+    padding: 0 30px;
+    gap: 30px;
+    background-color: rgba(2, 8, 23, 0.75);
+    border: 1px solid rgba(0, 191, 255, 0.25);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.header__logo {
+    flex-shrink: 0;
+}
+
+.header__logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header__logo img {
+    width: 200px;
+    height: auto;
+    display: block;
+}
+
+.header__search {
+    flex: 1;
+    max-width: 480px;
+}
+
+.header__search input {
+    width: 100%;
+    padding: 12px 18px;
+    background-color: rgba(10, 25, 50, 0.85);
+    border: 1px solid rgba(0, 191, 255, 0.4);
+    border-radius: 14px;
+    color: var(--cor-texto);
+    font-size: 14px;
+    outline: none;
+}
+
+.header__search input::placeholder {
+    color: var(--cor-texto-secundario);
+}
+
+.header__search input:focus {
+    border-color: var(--cor-azul);
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.25);
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-left: auto;
+}
+
+.header__nav a {
+    color: var(--cor-texto-secundario);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.header__nav a:hover {
+    color: var(--cor-azul);
+}
+
+.header__acoes {
+    display: flex;
+    align-items: center;
+}
+
+.header__login {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.header__login img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.header__login:hover {
+    background-color: rgba(0, 191, 255, 0.15);
+    box-shadow: 0 0 12px var(--cor-azul);
+}
