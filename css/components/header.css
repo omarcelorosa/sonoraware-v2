@@ -73,6 +73,7 @@
 }
 
 .header__acoes {
+    position: relative;
     display: flex;
     align-items: center;
 }
@@ -83,7 +84,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: transparent;
+    border: none;
     border-radius: 50%;
+    cursor: pointer;
     transition: 0.3s;
 }
 
@@ -96,4 +100,35 @@
 .header__login:hover {
     background-color: rgba(0, 191, 255, 0.15);
     box-shadow: 0 0 12px var(--cor-azul);
+}
+
+.header__menu-login {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 150px;
+    background-color: rgba(2, 8, 23, 0.95);
+    border: 1px solid rgba(0, 191, 255, 0.3);
+    border-radius: 10px;
+    padding: 8px;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+}
+
+.header__menu-login a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    padding: 10px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.header__menu-login a:hover {
+    background-color: rgba(0, 191, 255, 0.15);
+    color: var(--cor-azul);
+}
+
+.header__menu-login.ativo {
+    display: flex;
 }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/logo/favicon.png">
+    <title>Login | Sonoraware</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/pages/login.css">
+</head>
+
+<body>
+    <main class="login">
+        <section class="login__card">
+            <div class="login__logo">
+                <img src="/assets/logo/iconeHeadder2.png" alt="Logo Sonoraware">
+            </div>
+            <div class="login__cabecalho">
+                <h1>Entrar na sua conta</h1>
+                <p>
+                    Acesse sua conta e continue vivendo a música
+                    junto com a Sonoraware.
+                </p>
+            </div>
+            <form class="login__form">
+                <div class="login__campo">
+                    <span class="login__icone">👤</span>
+                    <input type="text" placeholder="Usuário ou e-mail">
+                </div>
+                <div class="login__campo">
+                    <span class="login__icone">🔒</span>
+                    <input type="password" id="senha"  placeholder="Senha">
+                    <button type="button" class="login__mostrar-senha" id="mostrar-senha">
+                        <span>👁</span>
+                    </button>
+                </div>
+                <a href="#" class="login__esqueci">
+                    Esqueceu a senha?
+                </a>
+                <button type="submit" class="login__entrar">
+                    Entrar
+                </button>
+            </form>
+            <div class="login__divisor">
+                <span>Ainda não tem uma conta?</span>
+            </div>
+            <a href="/pages/auth/escolha-perfil.html" class="login__cadastro">
+                Criar cadastro
+            </a>
+            <div class="login__rodape">
+                <a href="/index.html">Acessar como visitante</a>
+                <span>|</span>
+                <a href="#">Suporte</a>
+            </div>
+        </section>
+    </main>
+    <script src="/js/pages/login.js"></script>
+</body>
+
+</html>
