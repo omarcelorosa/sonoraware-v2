@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="/assets/logo/favicon.png">
+
+    <title>Cadastro de Banda | Sonoraware</title>
+
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/pages/cadastro-banda.css">
+
+</head>
+
+<body>
+
+    <main class="cadastro-banda">
+
+        <section class="cadastro-banda__card">
+
+            <div class="cadastro-banda__cabecalho">
+
+                <h1>Cadastre sua banda</h1>
+
+                <p>
+                    Crie o perfil da sua banda ou projeto musical
+                    e comece a encontrar oportunidades.
+                </p>
+
+            </div>
+
+
+            <form id="form-cadastro-banda" class="cadastro-banda__form">
+
+
+                <section class="form-secao">
+
+                    <h2>Dados de acesso</h2>
+
+                    <p class="form-secao__descricao">
+                        Defina os dados que serão utilizados para acessar a conta.
+                    </p>
+
+
+                    <div class="form-grid">
+
+                        <div class="form-campo">
+
+                            <label for="usuario">
+                                Nome de usuário
+                            </label>
+
+                            <input type="text" id="usuario" name="usuario" placeholder="Ex.: osviajeros"
+                                autocomplete="username" required>
+
+                        </div>
+
+
+                        <div class="form-campo">
+
+                            <label for="email-acesso">
+                                E-mail de acesso
+                            </label>
+
+                            <input type="email" id="email-acesso" name="email" placeholder="seuemail@email.com"
+                                autocomplete="email" required>
+
+                        </div>
+
+
+                        <div class="form-campo">
+
+                            <label for="senha">
+                                Senha
+                            </label>
+
+                            <input type="password" id="senha" name="senha" placeholder="Digite uma senha"
+                                autocomplete="new-password" required>
+
+                        </div>
+
+
+                        <div class="form-campo">
+
+                            <label for="confirmar-senha">
+                                Confirmar senha
+                            </label>
+
+                            <input type="password" id="confirmar-senha" name="confirmarSenha"
+                                placeholder="Digite a senha novamente" autocomplete="new-password" required>
+
+                            <small class="form-status" id="status-senha"></small>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <section class="form-secao">
+
+                    <h2>Informações principais</h2>
+
+
+                    <div class="form-grid">
+
+                        <div class="form-campo">
+
+                            <label for="nome-banda">
+                                Nome da banda ou artista
+                            </label>
+
+                            <input type="text" id="nome-banda" name="nomeBanda" placeholder="Ex.: Os Viajeros" required>
+
+                        </div>
+
+
+                        <div class="form-campo">
+
+                            <label for="cep">
+                                CEP
+                            </label>
+
+                            <input type="text" id="cep" name="cep" placeholder="Ex.: 14400-000" maxlength="9"
+                                inputmode="numeric" required>
+
+                            <small class="form-status" id="status-cep"></small>
+
+                        </div>
+
+
+                        <div class="form-campo">
+
+                            <label for="cidade">
+                                Cidade
+                            </label>
+
+                            <input type="text" id="cidade" name="cidade" placeholder="Preenchido automaticamente"
+                                readonly>
+
+                        </div>
+
+
+                        <div class="form-campo">
+
+                            <label for="estado">
+                                Estado
+                            </label>
+
+                            <input type="text" id="estado" name="estado" placeholder="UF" maxlength="2" readonly>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <section class="form-secao">
+
+                    <h2>Estilos musicais</h2>
+
+                    <p class="form-secao__descricao">
+                        Selecione todos os estilos que representam sua banda.
+                    </p>
+
+
+                    <div class="form-estilos">
+
+                        <label class="form-check">
+
+                            <input type="checkbox" name="estilos" value="rock">
+
+                            <span>Rock</span>
+
+                        </label>
+
+
+                        <label class="form-check">
+
+                            <input type="checkbox" name="estilos" value="pop">
+
+                            <span>Pop</span>
+
+                        </label>
+
+
+                        <label class="form-check">
+
+                            <input type="checkbox" name="estilos" value="mpb">
+
+                            <span>MPB</span>
+
+                        </label>
+
+
+                        <label class="form-check">
+
+                            <input type="checkbox" name="estilos" value="sertanejo">
+
+                            <span>Sertanejo</span>
+
+                        </label>
+
+
+                        <label class="form-check">
+
+                            <input type="checkbox" name="estilos" value="indie">
+
+                            <span>Indie</span>
+
+                        </label>
+
+
+                        <label class="form-check">
+
+                            <input type="checkbox" name="estilos" value="pagode">
+
+                            <span>Pagode</span>
+
+                        </label>
+
+
+                        <label class="form-check">
+
+                            <input type="checkbox" name="estilos" value="samba">
+
+                            <span>Samba</span>
+
+                        </label>
+
+
+                        <label class="form-check">
+
+                            <input type="checkbox" name="estilos" value="eletronica">
+
+                            <span>Eletrônica</span>
+
+                        </label>
+
+
+                        <label class="form-check">
+
+                            <input type="checkbox" name="estilos" value="rap">
+
+                            <span>Rap</span>
+
+                        </label>
+
+
+                        <label class="form-check">
+
+                            <input type="checkbox" name="estilos" value="cover">
+
+                            <span>Cover</span>
+
+                        </label>
+
+
+                        <label class="form-check">
+
+                            <input type="checkbox" name="estilos" value="outro">
+
+                            <span>Outro</span>
+
+                        </label>
+
+                    </div>
+
+                    <small class="form-status" id="status-estilos"></small>
+
+                </section>
+
+
+                <section class="form-secao">
+
+                    <h2>Sobre o grupo</h2>
+
+
+                    <div class="form-grid">
+
+                        <div class="form-campo">
+
+                            <label for="integrantes">
+                                Número de integrantes
+                            </label>
+
+                            <input type="number" id="integrantes" name="numeroIntegrantes" min="1" placeholder="Ex.: 4"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-campo">
+
+                            <label for="ano-formacao">
+                                Ano de formação
+                            </label>
+
+                            <input type="number" id="ano-formacao" name="anoFormacao" min="1900" max="2100"
+                                placeholder="Ex.: 2022">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-subtitulo">
+
+                        <h3>Contato para contratação</h3>
+
+                        <p>
+                            Informe quem deve ser procurado para conversar
+                            sobre apresentações e contratos.
+                        </p>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+                        <div class="form-campo">
+
+                            <label for="responsavel-nome">
+                                Responsável pela banda
+                            </label>
+
+                            <input type="text" id="responsavel-nome" name="responsavelNome"
+                                placeholder="Nome da pessoa responsável" required>
+
+                        </div>
+
+
+                        <div class="form-campo">
+
+                            <label for="responsavel-funcao">
+                                Função
+                            </label>
+
+                            <input type="text" id="responsavel-funcao" name="responsavelFuncao"
+                                placeholder="Ex.: Vocalista, empresário...">
+
+                        </div>
+
+
+                        <div class="form-campo">
+
+                            <label for="responsavel-telefone">
+                                Telefone
+                            </label>
+
+                            <input type="tel" id="responsavel-telefone" name="responsavelTelefone"
+                                placeholder="(16) 99999-9999" required>
+
+                        </div>
+
+
+                        <div class="form-campo">
+
+                            <label for="responsavel-email">
+                                E-mail
+                            </label>
+
+                            <input type="email" id="responsavel-email" name="responsavelEmail"
+                                placeholder="contato@banda.com" required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-campo form-campo--descricao">
+
+                        <label for="descricao">
+                            Sobre a banda
+                        </label>
+
+                        <textarea id="descricao" name="descricao" maxlength="1000"
+                            placeholder="Conte um pouco sobre a história, estilo, influências e proposta da banda..."></textarea>
+
+                    </div>
+
+                </section>
+
+
+                <section class="form-secao">
+
+                    <h2>Repertório</h2>
+
+                    <p class="form-secao__descricao">
+                        Conte ao contratante o que costuma fazer parte das apresentações.
+                    </p>
+
+
+                    <div class="form-campo">
+
+                        <label for="repertorio">
+                            Músicas, artistas e referências do repertório
+                        </label>
+
+                        <textarea id="repertorio" name="repertorio" maxlength="1500"
+                            placeholder="Ex.: Foo Fighters, Arctic Monkeys, Charlie Brown Jr., Pitty, covers nacionais e internacionais..."></textarea>
+
+                        <small class="form-ajuda">
+                            Você não precisa listar todas as músicas.
+                            Informe os principais artistas, músicas ou
+                            características do repertório.
+                        </small>
+
+                    </div>
+
+                </section>
+
+
+                <section class="form-secao">
+
+                    <h2>Estrutura</h2>
+
+
+                    <div class="form-campo">
+
+                        <label>
+                            A banda possui instrumentos próprios?
+                        </label>
+
+
+                        <div class="form-opcoes">
+
+                            <label class="form-radio">
+
+                                <input type="radio" name="instrumentosProprios" value="sim" required>
+
+                                <span>Sim</span>
+
+                            </label>
+
+
+                            <label class="form-radio">
+
+                                <input type="radio" name="instrumentosProprios" value="nao">
+
+                                <span>Não</span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-campo">
+
+                        <label for="instrumentos">
+                            Instrumentos disponíveis
+                        </label>
+
+                        <input type="text" id="instrumentos" name="instrumentos"
+                            placeholder="Ex.: guitarra, baixo, bateria, teclado...">
+
+                    </div>
+
+                </section>
+
+
+                <section class="form-secao">
+
+                    <h2>Disponibilidade</h2>
+
+                    <p class="form-secao__descricao">
+                        Informe até onde a banda está disponível
+                        para se deslocar para apresentações.
+                    </p>
+
+
+                    <div class="form-campo">
+
+                        <label for="disponibilidade">
+                            Disponibilidade para viajar
+                        </label>
+
+                        <select id="disponibilidade" name="disponibilidade" required>
+
+                            <option value="">
+                                Selecione uma opção
+                            </option>
+
+                            <option value="cidade">
+                                Somente na minha cidade
+                            </option>
+
+                            <option value="regiao">
+                                Minha cidade e região
+                            </option>
+
+                            <option value="estado">
+                                Todo o estado
+                            </option>
+
+                            <option value="brasil">
+                                Todo o Brasil
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </section>
+
+
+                <section class="form-secao">
+
+                    <h2>Redes sociais</h2>
+
+
+                    <div class="form-grid">
+
+                        <div class="form-campo">
+
+                            <label for="instagram">
+                                Instagram
+                            </label>
+
+                            <input type="url" id="instagram" name="instagram" placeholder="https://instagram.com/...">
+
+                        </div>
+
+
+                        <div class="form-campo">
+
+                            <label for="youtube">
+                                YouTube
+                            </label>
+
+                            <input type="url" id="youtube" name="youtube" placeholder="https://youtube.com/...">
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <section class="form-secao">
+
+                    <h2>Imagem da banda</h2>
+
+
+                    <div class="form-campo">
+
+                        <label for="foto-banda">
+                            Foto de perfil
+                        </label>
+
+                        <input type="file" id="foto-banda" name="fotoBanda" accept="image/*">
+
+                    </div>
+
+                </section>
+
+
+                <small class="form-status cadastro-banda__status" id="status-cadastro"></small>
+
+
+                <div class="cadastro-banda__acoes">
+
+                    <a href="/pages/auth/escolha-perfil.html" class="cadastro-banda__cancelar">
+                        Cancelar
+                    </a>
+
+
+                    <button type="submit" class="cadastro-banda__salvar" id="botao-criar-perfil">
+                        Criar perfil
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <script src="/js/pages/cadastro-banda.js"></script>
+
+</body>
+
+</html>
