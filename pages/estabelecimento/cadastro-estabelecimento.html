@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="/assets/logo/favicon.png">
+
+    <title>Cadastro de Local | Sonoraware</title>
+
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/pages/cadastro-estabelecimento.css">
+
+</head>
+
+<body>
+
+    <main class="cadastro-estabelecimento">
+
+        <section class="cadastro-estabelecimento__card">
+
+            <div class="cadastro-estabelecimento__cabecalho">
+
+                <h1>Cadastre seu local</h1>
+
+                <p>
+                    Crie o perfil do seu estabelecimento e encontre
+                    artistas e bandas para seus eventos.
+                </p>
+
+            </div>
+
+
+            <form id="form-cadastro-estabelecimento" class="cadastro-estabelecimento__form">
+
+
+                <section class="form-secao">
+
+                    <h2>Dados de acesso</h2>
+
+                    <p class="form-secao__descricao">
+                        Defina os dados utilizados para acessar a conta.
+                    </p>
+
+
+                    <div class="form-grid">
+
+                        <div class="form-campo">
+
+                            <label for="usuario">
+                                Nome de usuário
+                            </label>
+
+                            <input type="text" id="usuario" name="usuario" placeholder="Ex.: arena-central"
+                                autocomplete="username" minlength="3" maxlength="30" pattern="[A-Za-z0-9_-]{3,30}"
+                                title="Use de 3 a 30 caracteres, apenas letras, números, hífen ou underline." required>
+
+                        </div>
+
+
+                        <div class="form-campo">
+
+                            <label for="email-acesso">
+                                E-mail de acesso
+                            </label>
+
+                            <input type="email" id="email-acesso" name="email" placeholder="contato@email.com"
+                                autocomplete="email" maxlength="120" required>
+
+                        </div>
+
+
+                        <div class="form-campo">
+
+                            <label for="senha">
+                                Senha
+                            </label>
+
+                            <input type="password" id="senha" name="senha" placeholder="Mínimo de 8 caracteres"
+                                autocomplete="new-password" minlength="8" maxlength="100" required>
+
+                        </div>
+
+
+                        <div class="form-campo">
+
+                            <label for="confirmar-senha">
+                                Confirmar senha
+                            </label>
+
+                            <input type="password" id="confirmar-senha" name="confirmarSenha"
+                                placeholder="Digite a senha novamente" autocomplete="new-password" minlength="8"
+                                maxlength="100" required>
+
+                            <small class="form-status" id="status-senha"></small>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <section class="form-secao">
+
+                    <h2>Informações do estabelecimento</h2>
+
+
+                    <div class="form-grid">
+
+                        <div class="form-campo">
+
+                            <label for="nome-estabelecimento">
+                                Nome do estabelecimento
+                            </label>
+
+                            <input type="text" id="nome-estabelecimento" name="nomeEstabelecimento"
+                                placeholder="Ex.: Arena Central" minlength="2" maxlength="100" required>
+
+                        </div>
+
+
+                        <div class="form-campo">
+
+                            <label for="tipo-estabelecimento">
+                                Tipo de local
+                            </label>
+
+                            <select id="tipo-estabelecimento" name="tipoEstabelecimento" required>
+
+                                <option value="">
+                                    Selecione uma opção
+                                </option>
+
+                                <option value="casa-show">
+                                    Casa de show
+                                </option>
+
+                                <option value="bar">
+                                    Bar
+                                </option>
+
+                                <option value="restaurante">
+                                    Restaurante
+                                </option>
+
+                                <option value="pub">
+                                    Pub
+                                </option>
+
+                                <option value="boate">
+                                    Boate
+                                </option>
+
+                                <option value="espaco-eventos">
+                                    Espaço de eventos
+                                </option>
+
+                                <option value="outro">
+                                    Outro
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-campo form-campo--descricao">
+
+                        <label for="descricao">
+                            Sobre o local
+                        </label>
+
+                        <textarea id="descricao" name="descricao" minlength="10" maxlength="1000"
+                            placeholder="Conte um pouco sobre o estabelecimento, público, ambiente e proposta do local..."></textarea>
+
+                    </div>
+
+                </section>
+
+
+                <section class="form-secao">
+
+                    <h2>Endereço</h2>
+
+
+                    <div class="form-grid">
+
+                        <div class="form-campo">
+
+                            <label for="cep">
+                                CEP
+                            </label>
+
+                            <input type="text" id="cep" name="cep" placeholder="Ex.: 14400-000" minlength="9"
+                                maxlength="9" inputmode="numeric" pattern="[0-9]{5}-[0-9]{3}"
+                                title="Digite um CEP no formato 00000-000." required>
+
+                            <small class="form-status" id="status-cep"></small>
+
+                        </div>
+
+
+                        <div class="form-campo">
+
+                            <label for="cidade">
+                                Cidade
+                            </label>
+
+                            <input type="text" id="cidade" name="cidade" placeholder="Preenchido automaticamente"
+                                maxlength="100" readonly required>
+
+                        </div>
+
+
+                        <div class="form-campo">
+
+                            <label for="estado">
+                                Estado
+                            </label>
+
+                            <input type="text" id="estado" name="estado" placeholder="UF" maxlength="2" readonly
+                                required>
+
+                        </div>
+
+
+                        <div class="form-campo">
+
+                            <label for="bairro">
+                                Bairro
+                            </label>
+
+                            <input type="text" id="bairro" name="bairro" placeholder="Bairro" minlength="2"
+                                maxlength="100" required>
+
+                        </div>
+
+
+                        <div class="form-campo">
+
+                            <label for="logradouro">
+                                Rua / Avenida
+                            </label>
+
+                            <input type="text" id="logradouro" name="logradouro" placeholder="Rua ou avenida"
+                                minlength="2" maxlength="150" required>
+
+                        </div>
+
+
+                        <div class="form-campo">
+
+                            <label for="numero">
+                                Número
+                            </label>
+
+                            <input type="text" id="numero" name="numero" placeholder="Ex.: 250, 120-A ou s/n"
+                                maxlength="10" pattern="[A-Za-z0-9/-]+"
+                                title="Use apenas letras, números, hífen ou barra." required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-campo form-campo--descricao">
+
+                        <label for="complemento">
+                            Complemento
+                        </label>
+
+                        <input type="text" id="complemento" name="complemento"
+                            placeholder="Ex.: Piso superior, entrada lateral..." maxlength="150">
+
+                    </div>
+
+                </section>
+
+
+                <section class="form-secao">
+
+                    <h2>Contato responsável</h2>
+
+                    <p class="form-secao__descricao">
+                        Informe quem será responsável pelas contratações e eventos.
+                    </p>
+
+
+                    <div class="form-grid">
+
+                        <div class="form-campo">
+
+                            <label for="responsavel-nome">
+                                Nome do responsável
+                            </label>
+
+                            <input type="text" id="responsavel-nome" name="responsavelNome"
+                                placeholder="Nome da pessoa responsável" minlength="2" maxlength="100"
+                                pattern="[A-Za-zÀ-ÿ' -]{2,100}"
+                                title="Digite apenas letras, espaços, hífen ou apóstrofo." required>
+
+                        </div>
+
+
+                        <div class="form-campo">
+
+                            <label for="responsavel-funcao">
+                                Função
+                            </label>
+
+                            <input type="text" id="responsavel-funcao" name="responsavelFuncao"
+                                placeholder="Ex.: Gerente, produtor..." maxlength="80">
+
+                        </div>
+
+
+                        <div class="form-campo">
+
+                            <label for="responsavel-telefone">
+                                Telefone
+                            </label>
+
+                            <input type="tel" id="responsavel-telefone" name="responsavelTelefone"
+                                placeholder="(16) 99999-9999" inputmode="numeric" maxlength="15"
+                                pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}"
+                                title="Digite o telefone no formato (00) 00000-0000." required>
+
+                        </div>
+
+
+                        <div class="form-campo">
+
+                            <label for="responsavel-email">
+                                E-mail
+                            </label>
+
+                            <input type="email" id="responsavel-email" name="responsavelEmail"
+                                placeholder="responsavel@email.com" maxlength="120" required>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <section class="form-secao">
+
+                    <h2>Informações do espaço</h2>
+
+
+                    <div class="form-grid">
+
+                        <div class="form-campo">
+
+                            <label for="capacidade">
+                                Capacidade de público
+                            </label>
+
+                            <input type="number" id="capacidade" name="capacidade" min="1" max="1000000" step="1"
+                                placeholder="Ex.: 500" required>
+
+                        </div>
+
+
+                        <div class="form-campo">
+
+                            <label for="tipo-ambiente">
+                                Tipo de ambiente
+                            </label>
+
+                            <select id="tipo-ambiente" name="tipoAmbiente" required>
+
+                                <option value="">
+                                    Selecione uma opção
+                                </option>
+
+                                <option value="fechado">
+                                    Fechado
+                                </option>
+
+                                <option value="aberto">
+                                    Aberto
+                                </option>
+
+                                <option value="misto">
+                                    Misto
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <section class="form-secao">
+
+                    <h2>Estrutura disponível</h2>
+
+                    <p class="form-secao__descricao">
+                        Selecione os recursos disponíveis para apresentações.
+                    </p>
+
+
+                    <div class="form-estilos">
+
+                        <label class="form-check">
+
+                            <input type="checkbox" name="estrutura" value="palco">
+
+                            <span>Palco</span>
+
+                        </label>
+
+
+                        <label class="form-check">
+
+                            <input type="checkbox" name="estrutura" value="som">
+
+                            <span>Sistema de som</span>
+
+                        </label>
+
+
+                        <label class="form-check">
+
+                            <input type="checkbox" name="estrutura" value="iluminacao">
+
+                            <span>Iluminação</span>
+
+                        </label>
+
+
+                        <label class="form-check">
+
+                            <input type="checkbox" name="estrutura" value="microfones">
+
+                            <span>Microfones</span>
+
+                        </label>
+
+
+                        <label class="form-check">
+
+                            <input type="checkbox" name="estrutura" value="mesa-som">
+
+                            <span>Mesa de som</span>
+
+                        </label>
+
+
+                        <label class="form-check">
+
+                            <input type="checkbox" name="estrutura" value="camarim">
+
+                            <span>Camarim</span>
+
+                        </label>
+
+
+                        <label class="form-check">
+
+                            <input type="checkbox" name="estrutura" value="estacionamento">
+
+                            <span>Estacionamento</span>
+
+                        </label>
+
+                    </div>
+
+                </section>
+
+
+                <section class="form-secao">
+
+                    <h2>Acessibilidade</h2>
+
+                    <p class="form-secao__descricao">
+                        Informe os recursos de acessibilidade disponíveis no local.
+                    </p>
+
+
+                    <div class="form-estilos">
+
+                        <label class="form-check">
+
+                            <input type="checkbox" name="acessibilidade" value="acesso-cadeirantes">
+
+                            <span>Acesso para cadeirantes</span>
+
+                        </label>
+
+
+                        <label class="form-check">
+
+                            <input type="checkbox" name="acessibilidade" value="banheiro-acessivel">
+
+                            <span>Banheiro acessível</span>
+
+                        </label>
+
+
+                        <label class="form-check">
+
+                            <input type="checkbox" name="acessibilidade" value="area-pcd">
+
+                            <span>Área reservada PCD</span>
+
+                        </label>
+
+                    </div>
+
+                </section>
+
+
+                <section class="form-secao">
+
+                    <h2>Tipos de evento</h2>
+
+                    <p class="form-secao__descricao">
+                        Informe quais tipos de apresentações o local costuma receber.
+                    </p>
+
+
+                    <div class="form-estilos">
+
+                        <label class="form-check">
+
+                            <input type="checkbox" name="tiposEvento" value="show">
+
+                            <span>Shows</span>
+
+                        </label>
+
+
+                        <label class="form-check">
+
+                            <input type="checkbox" name="tiposEvento" value="festival">
+
+                            <span>Festivais</span>
+
+                        </label>
+
+
+                        <label class="form-check">
+
+                            <input type="checkbox" name="tiposEvento" value="evento-privado">
+
+                            <span>Eventos privados</span>
+
+                        </label>
+
+
+                        <label class="form-check">
+
+                            <input type="checkbox" name="tiposEvento" value="evento-corporativo">
+
+                            <span>Eventos corporativos</span>
+
+                        </label>
+
+
+                        <label class="form-check">
+
+                            <input type="checkbox" name="tiposEvento" value="outro">
+
+                            <span>Outro</span>
+
+                        </label>
+
+                    </div>
+
+
+                    <small class="form-status" id="status-eventos"></small>
+
+                </section>
+
+
+                <section class="form-secao">
+
+                    <h2>Redes sociais</h2>
+
+
+                    <div class="form-grid">
+
+                        <div class="form-campo">
+
+                            <label for="instagram">
+                                Instagram
+                            </label>
+
+                            <input type="url" id="instagram" name="instagram"
+                                placeholder="https://instagram.com/nomedolocal" maxlength="200"
+                                pattern="https://(www\.)?instagram\.com/.+"
+                                title="Digite uma URL válida do Instagram começando com https://instagram.com/.">
+
+                        </div>
+
+
+                        <div class="form-campo">
+
+                            <label for="site">
+                                Site
+                            </label>
+
+                            <input type="url" id="site" name="site" placeholder="https://www.seusite.com.br"
+                                maxlength="250" pattern="https?://.+"
+                                title="Digite uma URL começando com http:// ou https://.">
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <section class="form-secao">
+
+                    <h2>Imagem do local</h2>
+
+
+                    <div class="form-campo">
+
+                        <label for="foto-estabelecimento">
+                            Foto de perfil
+                        </label>
+
+                        <input type="file" id="foto-estabelecimento" name="fotoEstabelecimento"
+                            accept="image/jpeg,image/png,image/webp">
+
+                        <small class="form-ajuda">
+                            Formatos aceitos: JPG, PNG ou WEBP. Tamanho máximo: 5 MB.
+                        </small>
+
+                        <small class="form-status" id="status-imagem"></small>
+
+                    </div>
+
+                </section>
+
+
+                <small class="form-status cadastro-estabelecimento__status" id="status-cadastro"></small>
+
+
+                <div class="cadastro-estabelecimento__acoes">
+
+                    <a href="/pages/auth/escolha-perfil.html" class="cadastro-estabelecimento__cancelar">
+                        Cancelar
+                    </a>
+
+
+                    <button type="submit" class="cadastro-estabelecimento__salvar" id="botao-criar-perfil">
+                        Criar perfil
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <script src="/js/pages/cadastro-estabelecimento.js"></script>
+
+</body>
+
+</html>
