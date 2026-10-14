@@ -691,10 +691,10 @@ formularioSolicitacao.addEventListener(
             estilos:
                 estilosSelecionados,
 
-            valorCache:
+            valorCachePorBanda:
                 Number(
                     dadosFormulario.get(
-                        "valorCache"
+                        "valorCachePorBanda"
                     )
                 ),
 
