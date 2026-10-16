@@ -3,21 +3,551 @@
 
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="icon" type="image/png" href="/assets/logo/favicon.png">
-    <title> Sonoraware V2</title>
-    <link rel="stylesheet" href="./css/components/header.css">
-    <link rel="stylesheet" href="./css/global.css">
+
+    <title>Sonoraware</title>
+
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/components/header.css">
+    <link rel="stylesheet" href="/css/pages/home.css">
 </head>
 
 <body>
 
     <div id="header-container"></div>
 
-    <h1>Sonoraware V2</h1>
-    <p>Conectando sons e experiências.</p>
 
-    <script src="./js/global.js"></script>
+    <main class="home">
+
+        <section class="home-hero">
+
+            <div class="home-hero__overlay"></div>
+
+            <div class="home-hero__conteudo">
+
+                <span class="home-hero__destaque">
+                    Conectando música e oportunidades
+                </span>
+
+                <h1>
+                    Encontre o palco certo para sua música.
+                </h1>
+
+                <p>
+                    O Sonoraware conecta bandas e artistas a casas de show,
+                    bares, eventos e estabelecimentos que procuram música
+                    ao vivo.
+                </p>
+
+
+                <div class="home-hero__acoes">
+
+                    <a href="/pages/banda/oportunidades.html" class="home-botao home-botao--principal">
+                        Ver oportunidades
+                    </a>
+
+                    <a href="/pages/auth/escolha-perfil.html" class="home-botao home-botao--secundario">
+                        Criar perfil
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="home-secao">
+
+            <div class="home-secao__cabecalho">
+
+                <div>
+
+                    <span class="home-secao__subtitulo">
+                        Para bandas
+                    </span>
+
+                    <h2>
+                        Oportunidades em destaque
+                    </h2>
+
+                </div>
+
+
+                <a href="/pages/banda/oportunidades.html" class="home-secao__link">
+                    Ver todas →
+                </a>
+
+            </div>
+
+
+            <div class="oportunidades-home">
+
+
+                <article class="oportunidade-home-card">
+
+                    <div class="oportunidade-home-card__imagem">
+
+                        <img src="/assets/images/eventos/evento1.jpg" alt="Rock Night no Black House">
+
+                        <span class="oportunidade-home-card__status">
+                            Inscrições abertas
+                        </span>
+
+                    </div>
+
+
+                    <div class="oportunidade-home-card__conteudo">
+
+                        <h3>
+                            Rock Night no Black House
+                        </h3>
+
+                        <p class="oportunidade-home-card__estabelecimento">
+                            Black House
+                        </p>
+
+
+                        <div class="oportunidade-home-card__dados">
+
+                            <span>
+                                📍 Franca, SP
+                            </span>
+
+                            <span>
+                                📅 12/11/2026
+                            </span>
+
+                        </div>
+
+
+                        <div class="oportunidade-home-card__tags">
+
+                            <span>
+                                Rock
+                            </span>
+
+                            <span>
+                                Indie
+                            </span>
+
+                            <span>
+                                Alternativo
+                            </span>
+
+                        </div>
+
+
+                        <div class="oportunidade-home-card__rodape">
+
+                            <div>
+
+                                <span>
+                                    Cachê por banda
+                                </span>
+
+                                <strong>
+                                    R$ 1.500,00
+                                </strong>
+
+                            </div>
+
+
+                            <a href="/pages/eventos/detalhes-evento.html">
+                                Ver detalhes
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="oportunidade-home-card">
+
+                    <div class="oportunidade-home-card__imagem">
+
+                        <img src="/assets/images/eventos/evento2.jpg" alt="Festival de Verão">
+
+                        <span class="oportunidade-home-card__status">
+                            Inscrições abertas
+                        </span>
+
+                    </div>
+
+
+                    <div class="oportunidade-home-card__conteudo">
+
+                        <h3>
+                            Festival de Verão
+                        </h3>
+
+                        <p class="oportunidade-home-card__estabelecimento">
+                            Arena Central
+                        </p>
+
+
+                        <div class="oportunidade-home-card__dados">
+
+                            <span>
+                                📍 Ribeirão Preto, SP
+                            </span>
+
+                            <span>
+                                📅 18/12/2026
+                            </span>
+
+                        </div>
+
+
+                        <div class="oportunidade-home-card__tags">
+
+                            <span>
+                                Pop
+                            </span>
+
+                            <span>
+                                Rock
+                            </span>
+
+                        </div>
+
+
+                        <div class="oportunidade-home-card__rodape">
+
+                            <div>
+
+                                <span>
+                                    Cachê por banda
+                                </span>
+
+                                <strong>
+                                    R$ 1.200,00
+                                </strong>
+
+                            </div>
+
+
+                            <a href="/pages/eventos/detalhes-evento.html">
+                                Ver detalhes
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="oportunidade-home-card">
+
+                    <div class="oportunidade-home-card__imagem">
+
+                        <img src="/assets/images/eventos/evento3.jpg" alt="Noite Brasileira">
+
+                        <span class="oportunidade-home-card__status">
+                            Inscrições abertas
+                        </span>
+
+                    </div>
+
+
+                    <div class="oportunidade-home-card__conteudo">
+
+                        <h3>
+                            Noite Brasileira
+                        </h3>
+
+                        <p class="oportunidade-home-card__estabelecimento">
+                            Espaço Cultural Aurora
+                        </p>
+
+
+                        <div class="oportunidade-home-card__dados">
+
+                            <span>
+                                📍 São Carlos, SP
+                            </span>
+
+                            <span>
+                                📅 23/01/2027
+                            </span>
+
+                        </div>
+
+
+                        <div class="oportunidade-home-card__tags">
+
+                            <span>
+                                MPB
+                            </span>
+
+                            <span>
+                                Samba
+                            </span>
+
+                        </div>
+
+
+                        <div class="oportunidade-home-card__rodape">
+
+                            <div>
+
+                                <span>
+                                    Cachê por banda
+                                </span>
+
+                                <strong>
+                                    R$ 900,00
+                                </strong>
+
+                            </div>
+
+
+                            <a href="/pages/eventos/detalhes-evento.html">
+                                Ver detalhes
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <section class="home-secao">
+
+            <div class="home-secao__cabecalho">
+
+                <div>
+
+                    <span class="home-secao__subtitulo">
+                        Descubra artistas
+                    </span>
+
+                    <h2>
+                        Bandas em destaque
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="bandas-home">
+
+
+                <article class="banda-home-card">
+
+                    <div class="banda-home-card__imagem">
+
+                        <img src="/assets/images/bandas/banda1.jpg" alt="Banda Eclipse">
+
+                    </div>
+
+
+                    <div class="banda-home-card__conteudo">
+
+                        <h3>
+                            Banda Eclipse
+                        </h3>
+
+                        <p>
+                            📍 Franca, SP
+                        </p>
+
+
+                        <div class="banda-home-card__tags">
+
+                            <span>
+                                Rock
+                            </span>
+
+                            <span>
+                                Indie
+                            </span>
+
+                            <span>
+                                Alternativo
+                            </span>
+
+                        </div>
+
+
+                        <a href="/pages/banda/perfil-banda.html">
+                            Ver perfil
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="banda-home-card">
+
+                    <div class="banda-home-card__imagem">
+
+                        <img src="/assets/images/bandas/banda2.jpg" alt="Os Noturnos">
+
+                    </div>
+
+
+                    <div class="banda-home-card__conteudo">
+
+                        <h3>
+                            Os Noturnos
+                        </h3>
+
+                        <p>
+                            📍 Ribeirão Preto, SP
+                        </p>
+
+
+                        <div class="banda-home-card__tags">
+
+                            <span>
+                                Blues
+                            </span>
+
+                            <span>
+                                Rock
+                            </span>
+
+                            <span>
+                                Soul
+                            </span>
+
+                        </div>
+
+
+                        <a href="/pages/banda/perfil-banda.html">
+                            Ver perfil
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="banda-home-card">
+
+                    <div class="banda-home-card__imagem">
+
+                        <img src="/assets/images/bandas/banda3.jpg" alt="Vibe Central">
+
+                    </div>
+
+
+                    <div class="banda-home-card__conteudo">
+
+                        <h3>
+                            Vibe Central
+                        </h3>
+
+                        <p>
+                            📍 São Carlos, SP
+                        </p>
+
+
+                        <div class="banda-home-card__tags">
+
+                            <span>
+                                Pop Rock
+                            </span>
+
+                            <span>
+                                Indie
+                            </span>
+
+                            <span>
+                                MPB
+                            </span>
+
+                        </div>
+
+
+                        <a href="/pages/banda/perfil-banda.html">
+                            Ver perfil
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <section class="home-atalhos">
+
+            <div class="home-atalhos__conteudo">
+
+                <span>
+                    Sonoraware
+                </span>
+
+                <h2>
+                    Uma plataforma para os dois lados do palco.
+                </h2>
+
+                <p>
+                    Bandas encontram oportunidades. Estabelecimentos encontram
+                    artistas para seus eventos.
+                </p>
+
+            </div>
+
+
+            <div class="home-atalhos__cards">
+
+
+                <a href="/pages/banda/oportunidades.html" class="home-atalho-card">
+
+                    <strong>
+                        Sou banda
+                    </strong>
+
+                    <span>
+                        Encontre oportunidades e acompanhe suas inscrições.
+                    </span>
+
+                </a>
+
+
+                <a href="/pages/estabelecimento/criar-solicitacao.html" class="home-atalho-card">
+
+                    <strong>
+                        Sou estabelecimento
+                    </strong>
+
+                    <span>
+                        Publique oportunidades e encontre bandas para seu evento.
+                    </span>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="/js/global.js"></script>
+
 </body>
 
 </html>

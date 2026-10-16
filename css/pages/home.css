@@ -1,0 +1,729 @@
+.home {
+    min-height: 100vh;
+    padding-top: 78px;
+}
+
+
+/* HERO */
+
+.home-hero {
+    position: relative;
+
+    min-height: 560px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 70px 20px;
+
+    overflow: hidden;
+}
+
+.home-hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(2, 8, 20, 0.96) 0%,
+            rgba(2, 8, 20, 0.82) 45%,
+            rgba(2, 8, 20, 0.35) 100%
+        ),
+        url("/assets/images/backgrounds/home-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    z-index: 0;
+}
+
+.home-hero__overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 20% 40%,
+            rgba(0, 191, 255, 0.18),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 70% 25%,
+            rgba(140, 70, 255, 0.18),
+            transparent 30%
+        );
+
+    z-index: 1;
+}
+
+.home-hero__conteudo {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 0 auto;
+}
+
+.home-hero__destaque {
+    display: inline-flex;
+
+    margin-bottom: 18px;
+
+    padding: 7px 13px;
+
+    border-radius: 999px;
+
+    background-color: rgba(0, 191, 255, 0.08);
+
+    border: 1px solid rgba(0, 191, 255, 0.28);
+
+    color: #80e4ff;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.home-hero h1 {
+    max-width: 720px;
+
+    margin: 0 0 18px;
+
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.05;
+
+    color: #ffffff;
+}
+
+.home-hero p {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: var(--cor-texto-secundario);
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.home-hero__acoes {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 28px;
+}
+
+.home-botao {
+    min-width: 170px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 13px 18px;
+
+    border-radius: 11px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: 0.25s;
+}
+
+.home-botao--principal {
+    background: linear-gradient(
+        90deg,
+        #007bff,
+        #00bfff
+    );
+
+    color: white;
+}
+
+.home-botao--principal:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 0 18px rgba(0, 191, 255, 0.3);
+}
+
+.home-botao--secundario {
+    background-color: rgba(3, 12, 30, 0.65);
+
+    border: 1px solid rgba(126, 50, 255, 0.45);
+
+    color: #d7c7ff;
+}
+
+.home-botao--secundario:hover {
+    background-color: rgba(126, 50, 255, 0.12);
+
+    color: white;
+}
+
+
+/* SEÇÕES */
+
+.home-secao {
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding: 70px 20px 0;
+}
+
+.home-secao__cabecalho {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 22px;
+}
+
+.home-secao__subtitulo {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #79ddff;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.home-secao__cabecalho h2 {
+    margin: 0;
+
+    font-size: 30px;
+}
+
+.home-secao__link {
+    color: #9fe8ff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: 0.2s;
+}
+
+.home-secao__link:hover {
+    color: white;
+}
+
+
+/* OPORTUNIDADES */
+
+.oportunidades-home {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.oportunidade-home-card {
+    overflow: hidden;
+
+    background-color: rgba(3, 12, 30, 0.95);
+
+    border: 1px solid rgba(126, 50, 255, 0.45);
+    border-radius: 17px;
+
+    backdrop-filter: blur(12px);
+
+    transition: 0.25s;
+}
+
+.oportunidade-home-card:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(0, 191, 255, 0.45);
+
+    box-shadow: 0 0 18px rgba(0, 191, 255, 0.08);
+}
+
+.oportunidade-home-card__imagem {
+    position: relative;
+
+    height: 180px;
+
+    overflow: hidden;
+}
+
+.oportunidade-home-card__imagem img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.oportunidade-home-card__imagem::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(2, 8, 20, 0.68),
+        transparent 60%
+    );
+}
+
+.oportunidade-home-card__status {
+    position: absolute;
+
+    top: 12px;
+    right: 12px;
+
+    z-index: 2;
+
+    padding: 6px 10px;
+
+    border-radius: 999px;
+
+    background-color: rgba(0, 232, 160, 0.12);
+
+    border: 1px solid rgba(0, 232, 160, 0.4);
+
+    color: #00e8a0;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.oportunidade-home-card__conteudo {
+    padding: 17px;
+}
+
+.oportunidade-home-card__conteudo h3 {
+    margin: 0 0 4px;
+
+    font-size: 18px;
+}
+
+.oportunidade-home-card__estabelecimento {
+    margin: 0 0 11px;
+
+    color: var(--cor-texto-secundario);
+
+    font-size: 11px;
+}
+
+.oportunidade-home-card__dados {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 7px 12px;
+
+    margin-bottom: 11px;
+}
+
+.oportunidade-home-card__dados span {
+    color: var(--cor-texto-secundario);
+
+    font-size: 10px;
+}
+
+.oportunidade-home-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin-bottom: 16px;
+}
+
+.oportunidade-home-card__tags span {
+    padding: 4px 8px;
+
+    border-radius: 999px;
+
+    background-color: rgba(0, 191, 255, 0.08);
+
+    border: 1px solid rgba(0, 191, 255, 0.22);
+
+    color: #79ddff;
+
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.oportunidade-home-card__rodape {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding-top: 13px;
+
+    border-top: 1px solid rgba(170, 183, 207, 0.1);
+}
+
+.oportunidade-home-card__rodape div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.oportunidade-home-card__rodape span {
+    color: var(--cor-texto-secundario);
+
+    font-size: 9px;
+}
+
+.oportunidade-home-card__rodape strong {
+    color: #00e8a0;
+
+    font-size: 14px;
+}
+
+.oportunidade-home-card__rodape a {
+    padding: 8px 11px;
+
+    border-radius: 8px;
+
+    background-color: rgba(0, 191, 255, 0.08);
+
+    border: 1px solid rgba(0, 191, 255, 0.28);
+
+    color: #90e8ff;
+
+    text-decoration: none;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    transition: 0.2s;
+}
+
+.oportunidade-home-card__rodape a:hover {
+    background-color: rgba(0, 191, 255, 0.16);
+
+    color: white;
+}
+
+
+/* BANDAS */
+
+.bandas-home {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.banda-home-card {
+    overflow: hidden;
+
+    background-color: rgba(3, 12, 30, 0.95);
+
+    border: 1px solid rgba(0, 191, 255, 0.25);
+    border-radius: 17px;
+
+    transition: 0.25s;
+}
+
+.banda-home-card:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(126, 50, 255, 0.5);
+
+    box-shadow: 0 0 18px rgba(126, 50, 255, 0.08);
+}
+
+.banda-home-card__imagem {
+    height: 190px;
+
+    overflow: hidden;
+}
+
+.banda-home-card__imagem img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.banda-home-card__conteudo {
+    padding: 17px;
+}
+
+.banda-home-card__conteudo h3 {
+    margin: 0 0 5px;
+
+    font-size: 18px;
+}
+
+.banda-home-card__conteudo p {
+    margin: 0 0 10px;
+
+    color: var(--cor-texto-secundario);
+
+    font-size: 11px;
+}
+
+.banda-home-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin-bottom: 15px;
+}
+
+.banda-home-card__tags span {
+    padding: 4px 8px;
+
+    border-radius: 999px;
+
+    background-color: rgba(126, 50, 255, 0.08);
+
+    border: 1px solid rgba(126, 50, 255, 0.28);
+
+    color: #d39cff;
+
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.banda-home-card__conteudo > a {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 12px;
+
+    border-radius: 9px;
+
+    background-color: rgba(0, 191, 255, 0.08);
+
+    border: 1px solid rgba(0, 191, 255, 0.28);
+
+    color: #90e8ff;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    transition: 0.2s;
+}
+
+.banda-home-card__conteudo > a:hover {
+    background-color: rgba(0, 191, 255, 0.16);
+
+    color: white;
+}
+
+
+/* ATALHOS */
+
+.home-atalhos {
+    width: calc(100% - 40px);
+    max-width: 1180px;
+
+    margin: 70px auto 50px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1.2fr);
+
+    gap: 30px;
+
+    align-items: center;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(3, 12, 30, 0.96),
+            rgba(11, 22, 45, 0.92)
+        );
+
+    border: 1px solid rgba(126, 50, 255, 0.38);
+    border-radius: 20px;
+
+    backdrop-filter: blur(12px);
+}
+
+.home-atalhos__conteudo > span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #79ddff;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+.home-atalhos__conteudo h2 {
+    margin: 0 0 10px;
+
+    font-size: 28px;
+    line-height: 1.25;
+}
+
+.home-atalhos__conteudo p {
+    margin: 0;
+
+    color: var(--cor-texto-secundario);
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.home-atalhos__cards {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+.home-atalho-card {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+
+    padding: 20px;
+
+    min-height: 130px;
+
+    background-color: rgba(7, 19, 40, 0.8);
+
+    border: 1px solid rgba(0, 191, 255, 0.18);
+    border-radius: 14px;
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: 0.25s;
+}
+
+.home-atalho-card:hover {
+    transform: translateY(-2px);
+
+    border-color: rgba(0, 191, 255, 0.45);
+
+    background-color: rgba(0, 191, 255, 0.08);
+}
+
+.home-atalho-card strong {
+    font-size: 15px;
+}
+
+.home-atalho-card span {
+    color: var(--cor-texto-secundario);
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 950px) {
+
+    .oportunidades-home,
+    .bandas-home {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home-atalhos {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .home {
+        padding-top: 70px;
+    }
+
+    .home-hero {
+        min-height: 500px;
+
+        padding: 55px 16px;
+    }
+
+    .home-hero h1 {
+        font-size: 42px;
+    }
+
+    .home-hero p {
+        font-size: 15px;
+    }
+
+    .home-hero__acoes {
+        flex-direction: column;
+    }
+
+    .home-botao {
+        width: 100%;
+    }
+
+    .home-secao {
+        padding: 55px 12px 0;
+    }
+
+    .home-secao__cabecalho {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .home-secao__cabecalho h2 {
+        font-size: 25px;
+    }
+
+    .oportunidades-home,
+    .bandas-home {
+        grid-template-columns: 1fr;
+    }
+
+    .home-atalhos {
+        width: calc(100% - 24px);
+
+        margin-top: 55px;
+
+        padding: 20px;
+    }
+
+    .home-atalhos__cards {
+        grid-template-columns: 1fr;
+    }
+
+}
