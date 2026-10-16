@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="/assets/logo/favicon.png">
+
+    <title>Oportunidades | Sonoraware</title>
+
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/components/header.css">
+    <link rel="stylesheet" href="/css/pages/oportunidades.css">
+
+</head>
+
+<body>
+
+    <div id="header-container"></div>
+
+
+    <main class="oportunidades">
+
+        <div class="oportunidades__container">
+
+
+            <section class="oportunidades-cabecalho">
+
+                <div class="oportunidades-cabecalho__icone">
+                    ✦
+                </div>
+
+                <div class="oportunidades-cabecalho__conteudo">
+
+                    <h1>
+                        Oportunidades
+                    </h1>
+
+                    <p>
+                        Encontre eventos e oportunidades compatíveis com o estilo da sua banda.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="oportunidades-filtros">
+
+                <div class="filtro-busca">
+
+                    <input type="search" id="buscar-oportunidade" placeholder="Buscar por evento ou estabelecimento...">
+
+                </div>
+
+
+                <div class="filtro-select">
+
+                    <select id="filtro-estilo">
+
+                        <option value="todos">
+                            Estilo musical
+                        </option>
+
+                        <option value="rock">
+                            Rock
+                        </option>
+
+                        <option value="pop">
+                            Pop
+                        </option>
+
+                        <option value="indie">
+                            Indie
+                        </option>
+
+                        <option value="mpb">
+                            MPB
+                        </option>
+
+                        <option value="samba">
+                            Samba
+                        </option>
+
+                        <option value="blues">
+                            Blues
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="filtro-select">
+
+                    <select id="filtro-cidade">
+
+                        <option value="todas">
+                            Cidade
+                        </option>
+
+                        <option value="franca">
+                            Franca, SP
+                        </option>
+
+                        <option value="ribeirao-preto">
+                            Ribeirão Preto, SP
+                        </option>
+
+                        <option value="sao-carlos">
+                            São Carlos, SP
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="filtro-select">
+
+                    <select id="filtro-negociacao">
+
+                        <option value="todas">
+                            Negociação
+                        </option>
+
+                        <option value="sim">
+                            Aceita negociação
+                        </option>
+
+                        <option value="nao">
+                            Valor fixo
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button type="button" class="filtros-limpar" id="limpar-filtros">
+                    Limpar filtros
+                </button>
+
+            </section>
+
+
+            <section class="oportunidades-lista" id="lista-oportunidades">
+
+
+                <article class="oportunidade-card" data-estilos="rock indie alternativo" data-cidade="franca"
+                    data-negociacao="sim">
+
+                    <div class="oportunidade-card__imagem">
+
+                        <img src="/assets/images/eventos/evento1.jpg" alt="Rock Night no Black House">
+
+                    </div>
+
+
+                    <div class="oportunidade-card__principal">
+
+                        <div class="oportunidade-card__titulo">
+
+                            <div>
+
+                                <h2>
+                                    Rock Night no Black House
+                                </h2>
+
+                                <p>
+                                    Black House
+                                </p>
+
+                            </div>
+
+
+                            <span class="oportunidade-status">
+                                Inscrições abertas
+                            </span>
+
+                        </div>
+
+
+                        <div class="oportunidade-card__dados">
+
+                            <span>
+                                📍 Franca, SP
+                            </span>
+
+                            <span>
+                                📅 12/11/2026
+                            </span>
+
+                            <span>
+                                🕒 20:00
+                            </span>
+
+                            <span>
+                                ⏱ 1h30 por banda
+                            </span>
+
+                        </div>
+
+
+                        <div class="oportunidade-card__tags">
+
+                            <span>
+                                Rock
+                            </span>
+
+                            <span>
+                                Indie
+                            </span>
+
+                            <span>
+                                Alternativo
+                            </span>
+
+                        </div>
+
+
+                        <p class="oportunidade-card__descricao">
+                            Evento voltado para bandas autorais da região,
+                            com estrutura completa de palco e sonorização.
+                        </p>
+
+                    </div>
+
+
+                    <div class="oportunidade-card__informacoes">
+
+                        <div class="oportunidade-informacao">
+
+                            <span>
+                                Cachê por banda
+                            </span>
+
+                            <strong>
+                                R$ 1.500,00
+                            </strong>
+
+                        </div>
+
+
+                        <div class="oportunidade-informacao">
+
+                            <span>
+                                Vagas
+                            </span>
+
+                            <strong>
+                                2 bandas
+                            </strong>
+
+                        </div>
+
+
+                        <div class="oportunidade-negociacao">
+                            ✓ Aceita negociação
+                        </div>
+
+                    </div>
+
+
+                    <div class="oportunidade-card__acoes">
+
+                        <div class="oportunidade-prazo">
+
+                            <span>
+                                Inscrições até
+                            </span>
+
+                            <strong>
+                                10/10/2026
+                            </strong>
+
+                        </div>
+
+
+                        <a href="/pages/eventos/detalhes-evento.html" class="oportunidade-card__botao">
+                            Ver detalhes
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="oportunidade-card" data-estilos="pop rock" data-cidade="ribeirao-preto"
+                    data-negociacao="nao">
+
+                    <div class="oportunidade-card__imagem">
+
+                        <img src="/assets/images/eventos/evento2.jpg" alt="Festival de Verão">
+
+                    </div>
+
+
+                    <div class="oportunidade-card__principal">
+
+                        <div class="oportunidade-card__titulo">
+
+                            <div>
+
+                                <h2>
+                                    Festival de Verão
+                                </h2>
+
+                                <p>
+                                    Arena Central
+                                </p>
+
+                            </div>
+
+
+                            <span class="oportunidade-status">
+                                Inscrições abertas
+                            </span>
+
+                        </div>
+
+
+                        <div class="oportunidade-card__dados">
+
+                            <span>
+                                📍 Ribeirão Preto, SP
+                            </span>
+
+                            <span>
+                                📅 18/12/2026
+                            </span>
+
+                            <span>
+                                🕒 19:00
+                            </span>
+
+                            <span>
+                                ⏱ 1h por banda
+                            </span>
+
+                        </div>
+
+
+                        <div class="oportunidade-card__tags">
+
+                            <span>
+                                Pop
+                            </span>
+
+                            <span>
+                                Rock
+                            </span>
+
+                        </div>
+
+
+                        <p class="oportunidade-card__descricao">
+                            Festival com apresentações de bandas locais
+                            e regionais durante toda a noite.
+                        </p>
+
+                    </div>
+
+
+                    <div class="oportunidade-card__informacoes">
+
+                        <div class="oportunidade-informacao">
+
+                            <span>
+                                Cachê por banda
+                            </span>
+
+                            <strong>
+                                R$ 1.200,00
+                            </strong>
+
+                        </div>
+
+
+                        <div class="oportunidade-informacao">
+
+                            <span>
+                                Vagas
+                            </span>
+
+                            <strong>
+                                4 bandas
+                            </strong>
+
+                        </div>
+
+
+                        <div class="oportunidade-negociacao oportunidade-negociacao--fixo">
+                            Valor fixo
+                        </div>
+
+                    </div>
+
+
+                    <div class="oportunidade-card__acoes">
+
+                        <div class="oportunidade-prazo">
+
+                            <span>
+                                Inscrições até
+                            </span>
+
+                            <strong>
+                                01/12/2026
+                            </strong>
+
+                        </div>
+
+
+                        <a href="/pages/eventos/detalhes-evento.html" class="oportunidade-card__botao">
+                            Ver detalhes
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="oportunidade-card" data-estilos="mpb samba" data-cidade="sao-carlos"
+                    data-negociacao="sim">
+
+                    <div class="oportunidade-card__imagem">
+
+                        <img src="/assets/images/eventos/evento3.jpg" alt="Noite Brasileira">
+
+                    </div>
+
+
+                    <div class="oportunidade-card__principal">
+
+                        <div class="oportunidade-card__titulo">
+
+                            <div>
+
+                                <h2>
+                                    Noite Brasileira
+                                </h2>
+
+                                <p>
+                                    Espaço Cultural Aurora
+                                </p>
+
+                            </div>
+
+
+                            <span class="oportunidade-status">
+                                Inscrições abertas
+                            </span>
+
+                        </div>
+
+
+                        <div class="oportunidade-card__dados">
+
+                            <span>
+                                📍 São Carlos, SP
+                            </span>
+
+                            <span>
+                                📅 23/01/2027
+                            </span>
+
+                            <span>
+                                🕒 21:00
+                            </span>
+
+                            <span>
+                                ⏱ 1h30 por banda
+                            </span>
+
+                        </div>
+
+
+                        <div class="oportunidade-card__tags">
+
+                            <span>
+                                MPB
+                            </span>
+
+                            <span>
+                                Samba
+                            </span>
+
+                        </div>
+
+
+                        <p class="oportunidade-card__descricao">
+                            Evento dedicado à música brasileira,
+                            com foco em repertórios autorais e releituras.
+                        </p>
+
+                    </div>
+
+
+                    <div class="oportunidade-card__informacoes">
+
+                        <div class="oportunidade-informacao">
+
+                            <span>
+                                Cachê por banda
+                            </span>
+
+                            <strong>
+                                R$ 900,00
+                            </strong>
+
+                        </div>
+
+
+                        <div class="oportunidade-informacao">
+
+                            <span>
+                                Vagas
+                            </span>
+
+                            <strong>
+                                3 bandas
+                            </strong>
+
+                        </div>
+
+
+                        <div class="oportunidade-negociacao">
+                            ✓ Aceita negociação
+                        </div>
+
+                    </div>
+
+
+                    <div class="oportunidade-card__acoes">
+
+                        <div class="oportunidade-prazo">
+
+                            <span>
+                                Inscrições até
+                            </span>
+
+                            <strong>
+                                10/01/2027
+                            </strong>
+
+                        </div>
+
+
+                        <a href="/pages/eventos/detalhes-evento.html" class="oportunidade-card__botao">
+                            Ver detalhes
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="oportunidade-card" data-estilos="blues rock" data-cidade="franca" data-negociacao="sim">
+
+                    <div class="oportunidade-card__imagem">
+
+                        <img src="/assets/images/eventos/evento4.jpg" alt="Blues & Rock Sessions">
+
+                    </div>
+
+
+                    <div class="oportunidade-card__principal">
+
+                        <div class="oportunidade-card__titulo">
+
+                            <div>
+
+                                <h2>
+                                    Blues & Rock Sessions
+                                </h2>
+
+                                <p>
+                                    Garage Pub
+                                </p>
+
+                            </div>
+
+
+                            <span class="oportunidade-status">
+                                Inscrições abertas
+                            </span>
+
+                        </div>
+
+
+                        <div class="oportunidade-card__dados">
+
+                            <span>
+                                📍 Franca, SP
+                            </span>
+
+                            <span>
+                                📅 14/02/2027
+                            </span>
+
+                            <span>
+                                🕒 20:30
+                            </span>
+
+                            <span>
+                                ⏱ 2h por banda
+                            </span>
+
+                        </div>
+
+
+                        <div class="oportunidade-card__tags">
+
+                            <span>
+                                Blues
+                            </span>
+
+                            <span>
+                                Rock
+                            </span>
+
+                        </div>
+
+
+                        <p class="oportunidade-card__descricao">
+                            Noite dedicada ao blues e ao rock,
+                            com palco equipado e estrutura de áudio disponível.
+                        </p>
+
+                    </div>
+
+
+                    <div class="oportunidade-card__informacoes">
+
+                        <div class="oportunidade-informacao">
+
+                            <span>
+                                Cachê por banda
+                            </span>
+
+                            <strong>
+                                R$ 1.000,00
+                            </strong>
+
+                        </div>
+
+
+                        <div class="oportunidade-informacao">
+
+                            <span>
+                                Vagas
+                            </span>
+
+                            <strong>
+                                2 bandas
+                            </strong>
+
+                        </div>
+
+
+                        <div class="oportunidade-negociacao">
+                            ✓ Aceita negociação
+                        </div>
+
+                    </div>
+
+
+                    <div class="oportunidade-card__acoes">
+
+                        <div class="oportunidade-prazo">
+
+                            <span>
+                                Inscrições até
+                            </span>
+
+                            <strong>
+                                01/02/2027
+                            </strong>
+
+                        </div>
+
+
+                        <a href="/pages/eventos/detalhes-evento.html" class="oportunidade-card__botao">
+                            Ver detalhes
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </section>
+
+
+            <div class="oportunidades-vazio" id="oportunidades-vazio" hidden>
+
+                <h2>
+                    Nenhuma oportunidade encontrada
+                </h2>
+
+                <p>
+                    Tente alterar os filtros para encontrar outras oportunidades.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <script src="/js/global.js"></script>
+    <script src="/js/pages/oportunidades.js"></script>
+
+</body>
+
+</html>
