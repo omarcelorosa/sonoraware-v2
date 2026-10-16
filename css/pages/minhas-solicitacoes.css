@@ -1,0 +1,560 @@
+.minhas-solicitacoes {
+    min-height: 100vh;
+
+    padding: 100px 20px 40px;
+}
+
+.minhas-solicitacoes__container {
+    width: 100%;
+    max-width: 1150px;
+
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+.solicitacoes-cabecalho {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 18px;
+
+    padding: 22px 24px;
+
+    margin-bottom: 22px;
+
+    background-color: rgba(3, 12, 30, 0.92);
+
+    border: 1px solid rgba(0, 191, 255, 0.3);
+    border-radius: 18px;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 0 25px rgba(0, 140, 255, 0.08);
+}
+
+.solicitacoes-cabecalho__icone {
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background-color: rgba(0, 191, 255, 0.14);
+
+    color: var(--cor-azul);
+
+    font-size: 20px;
+}
+
+.solicitacoes-cabecalho__conteudo {
+    flex: 1;
+}
+
+.solicitacoes-cabecalho h1 {
+    font-size: 27px;
+
+    margin-bottom: 5px;
+}
+
+.solicitacoes-cabecalho p {
+    color: var(--cor-texto-secundario);
+
+    font-size: 13px;
+
+    margin-bottom: 14px;
+}
+
+
+/* ========================================
+   BOTÕES DO CABEÇALHO
+======================================== */
+
+.solicitacoes-cabecalho__acoes {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.cabecalho-botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px 14px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.cabecalho-botao--secundario {
+    background-color: rgba(12, 29, 54, 0.85);
+
+    border: 1px solid rgba(170, 183, 207, 0.3);
+
+    color: var(--cor-texto);
+}
+
+.cabecalho-botao--secundario:hover {
+    border-color: var(--cor-azul);
+
+    color: var(--cor-azul);
+}
+
+.cabecalho-botao--ativo {
+    border: 1px solid var(--cor-azul);
+
+    background-color: rgba(0, 191, 255, 0.15);
+
+    color: var(--cor-azul);
+}
+
+
+/* ========================================
+   LISTA
+======================================== */
+
+.solicitacoes-lista {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+/* ========================================
+   CARD
+======================================== */
+
+.solicitacao-card {
+    display: grid;
+
+    grid-template-columns: 145px minmax(0, 1fr) 210px;
+
+    gap: 18px;
+
+    padding: 14px;
+
+    background-color: rgba(3, 12, 30, 0.94);
+
+    border: 1px solid rgba(0, 191, 255, 0.2);
+    border-radius: 16px;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 0 20px rgba(0, 140, 255, 0.06);
+
+    transition: 0.3s;
+}
+
+.solicitacao-card:hover {
+    border-color: rgba(0, 191, 255, 0.45);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 0 25px rgba(0, 191, 255, 0.1);
+}
+
+
+/* ========================================
+   IMAGEM
+======================================== */
+
+.solicitacao-card__imagem {
+    width: 145px;
+    height: 110px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background-color: rgba(12, 29, 54, 0.9);
+}
+
+.solicitacao-card__imagem img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* ========================================
+   CONTEÚDO CENTRAL
+======================================== */
+
+.solicitacao-card__conteudo {
+    min-width: 0;
+}
+
+.solicitacao-card__conteudo h2 {
+    margin-bottom: 4px;
+
+    font-size: 17px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.solicitacao-card__local {
+    margin-bottom: 8px;
+
+    color: var(--cor-texto-secundario);
+
+    font-size: 12px;
+}
+
+
+/* ========================================
+   DADOS
+======================================== */
+
+.solicitacao-card__dados {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px 16px;
+
+    margin-bottom: 7px;
+}
+
+.solicitacao-card__dados span {
+    color: var(--cor-texto-secundario);
+
+    font-size: 11px;
+}
+
+.solicitacao-card__dados span:last-child {
+    color: var(--cor-texto);
+}
+
+
+/* ========================================
+   TAGS
+======================================== */
+
+.solicitacao-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin: 8px 0;
+}
+
+.solicitacao-card__tags span {
+    padding: 4px 9px;
+
+    border-radius: 999px;
+
+    background-color: rgba(170, 183, 207, 0.1);
+
+    border: 1px solid rgba(170, 183, 207, 0.2);
+
+    color: var(--cor-texto-secundario);
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.solicitacao-card__tags .tag-negociacao {
+    background-color: rgba(0, 208, 132, 0.1);
+
+    border-color: rgba(0, 208, 132, 0.25);
+
+    color: #00d084;
+}
+
+.solicitacao-card__tags .tag-encerrada {
+    background-color: rgba(255, 77, 103, 0.08);
+
+    border-color: rgba(255, 77, 103, 0.22);
+
+    color: #ff6b80;
+}
+
+
+/* ========================================
+   DESCRIÇÃO
+======================================== */
+
+.solicitacao-card__descricao {
+    color: var(--cor-texto-secundario);
+
+    font-size: 11px;
+
+    line-height: 1.4;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* ========================================
+   LATERAL
+======================================== */
+
+.solicitacao-card__lateral {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+
+/* ========================================
+   EDITAR
+======================================== */
+
+.solicitacao-card__editar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 34px;
+
+    padding: 8px 12px;
+
+    background-color: transparent;
+
+    border: 1px solid rgba(170, 183, 207, 0.45);
+    border-radius: 9px;
+
+    color: var(--cor-texto);
+
+    font-size: 11px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.solicitacao-card__editar:hover {
+    border-color: var(--cor-azul);
+
+    color: var(--cor-azul);
+
+    background-color: rgba(0, 191, 255, 0.05);
+}
+
+.solicitacao-card__editar--desabilitado {
+    opacity: 0.5;
+
+    cursor: not-allowed;
+}
+
+
+/* ========================================
+   PRAZO
+======================================== */
+
+.solicitacao-card__prazo {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+
+    padding: 8px 0;
+
+    text-align: center;
+}
+
+.solicitacao-card__prazo span {
+    color: var(--cor-texto-secundario);
+
+    font-size: 10px;
+}
+
+.solicitacao-card__prazo strong {
+    font-size: 12px;
+}
+
+
+/* ========================================
+   VER DETALHES
+======================================== */
+
+.solicitacao-card__detalhes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 36px;
+
+    padding: 9px 14px;
+
+    background: linear-gradient(90deg,
+            #007bff,
+            #00bfff);
+
+    border-radius: 9px;
+
+    color: white;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.solicitacao-card__detalhes:hover {
+    transform: translateY(-1px);
+
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.3);
+}
+
+
+/* ========================================
+   ESTADO VAZIO
+======================================== */
+
+.solicitacoes-vazio {
+    padding: 50px 20px;
+
+    text-align: center;
+
+    background-color: rgba(3, 12, 30, 0.92);
+
+    border: 1px solid rgba(170, 183, 207, 0.15);
+    border-radius: 18px;
+}
+
+.solicitacoes-vazio h2 {
+    margin-bottom: 8px;
+
+    font-size: 20px;
+}
+
+.solicitacoes-vazio p {
+    margin-bottom: 18px;
+
+    color: var(--cor-texto-secundario);
+
+    font-size: 13px;
+}
+
+.solicitacoes-vazio__botao {
+    display: inline-flex;
+
+    padding: 10px 16px;
+
+    background: linear-gradient(90deg,
+            #007bff,
+            #00bfff);
+
+    border-radius: 9px;
+
+    color: white;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .solicitacao-card {
+        grid-template-columns: 120px 1fr;
+    }
+
+    .solicitacao-card__imagem {
+        width: 120px;
+        height: 100px;
+    }
+
+    .solicitacao-card__lateral {
+        grid-column: 1 / -1;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        align-items: center;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .minhas-solicitacoes {
+        padding: 90px 12px 25px;
+    }
+
+    .solicitacoes-cabecalho {
+        padding: 18px;
+    }
+
+    .solicitacoes-cabecalho__icone {
+        display: none;
+    }
+
+    .solicitacoes-cabecalho h1 {
+        font-size: 23px;
+    }
+
+    .solicitacoes-cabecalho__acoes {
+        flex-direction: column;
+    }
+
+    .cabecalho-botao {
+        width: 100%;
+    }
+
+    .solicitacao-card {
+        grid-template-columns: 1fr;
+    }
+
+    .solicitacao-card__imagem {
+        width: 100%;
+        height: 170px;
+    }
+
+    .solicitacao-card__conteudo h2 {
+        white-space: normal;
+    }
+
+    .solicitacao-card__descricao {
+        white-space: normal;
+    }
+
+    .solicitacao-card__lateral {
+        grid-column: auto;
+
+        display: flex;
+    }
+
+}

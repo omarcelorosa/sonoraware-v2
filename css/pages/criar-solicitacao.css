@@ -1,11 +1,132 @@
 .criar-solicitacao {
     min-height: 100vh;
 
+    padding: 100px 20px 40px;
+}
+
+.criar-solicitacao__container {
+    width: 100%;
+    max-width: 1150px;
+
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   MENU DE SOLICITAÇÕES
+======================================== */
+
+.solicitacoes-menu {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 18px;
+
+    padding: 20px 24px;
+
+    margin-bottom: 24px;
+
+    background-color: rgba(3, 12, 30, 0.94);
+
+    border: 1px solid rgba(0, 191, 255, 0.3);
+    border-radius: 18px;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 0 25px rgba(0, 140, 255, 0.08);
+}
+
+.solicitacoes-menu__icone {
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+
     display: flex;
     align-items: center;
     justify-content: center;
 
-    padding: 100px 20px 40px;
+    background-color: rgba(0, 191, 255, 0.14);
+
+    border-radius: 12px;
+
+    color: var(--cor-azul);
+
+    font-size: 20px;
+}
+
+.solicitacoes-menu__conteudo {
+    flex: 1;
+}
+
+.solicitacoes-menu__conteudo h1 {
+    margin-bottom: 4px;
+
+    font-size: 27px;
+}
+
+.solicitacoes-menu__conteudo p {
+    margin-bottom: 13px;
+
+    color: var(--cor-texto-secundario);
+
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.solicitacoes-menu__acoes {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.solicitacoes-menu__botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px 14px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.solicitacoes-menu__botao--ativo {
+    background-color: rgba(0, 191, 255, 0.15);
+
+    border: 1px solid var(--cor-azul);
+
+    color: var(--cor-azul);
+}
+
+.solicitacoes-menu__botao--ativo:hover {
+    background-color: rgba(0, 191, 255, 0.22);
+}
+
+.solicitacoes-menu__botao--secundario {
+    background-color: rgba(12, 29, 54, 0.85);
+
+    border: 1px solid rgba(170, 183, 207, 0.35);
+
+    color: var(--cor-texto);
+}
+
+.solicitacoes-menu__botao--secundario:hover {
+    border-color: var(--cor-azul);
+
+    color: var(--cor-azul);
+
+    background-color: rgba(0, 191, 255, 0.06);
 }
 
 
@@ -15,7 +136,9 @@
 
 .criar-solicitacao__card {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1150px;
+
+    margin: 0 auto;
 
     padding: 32px;
 
@@ -31,19 +154,19 @@
 
 
 /* ========================================
-   CABEÇALHO
+   CABEÇALHO DO FORMULÁRIO
 ======================================== */
 
 .criar-solicitacao__cabecalho {
-    text-align: center;
-
     margin-bottom: 30px;
+
+    text-align: center;
 }
 
 .criar-solicitacao__cabecalho h1 {
-    font-size: 34px;
-
     margin-bottom: 10px;
+
+    font-size: 34px;
 }
 
 .criar-solicitacao__cabecalho p {
@@ -80,21 +203,21 @@
 }
 
 .form-secao h2 {
+    margin-bottom: 20px;
+
     color: var(--cor-azul);
 
     font-size: 20px;
-
-    margin-bottom: 20px;
 }
 
 .form-secao__descricao {
+    margin-top: -10px;
+    margin-bottom: 18px;
+
     color: var(--cor-texto-secundario);
 
     font-size: 14px;
     line-height: 1.5;
-
-    margin-top: -10px;
-    margin-bottom: 18px;
 }
 
 
@@ -111,9 +234,9 @@
 }
 
 .form-subtitulo h3 {
-    font-size: 17px;
-
     margin-bottom: 5px;
+
+    font-size: 17px;
 }
 
 .form-subtitulo p {
@@ -125,7 +248,7 @@
 
 
 /* ========================================
-   GRID
+   GRIDS
 ======================================== */
 
 .form-grid {
@@ -134,6 +257,20 @@
     grid-template-columns: repeat(2, 1fr);
 
     gap: 18px;
+}
+
+.bandas-grid {
+    display: grid;
+
+    grid-template-columns: 1.4fr 1fr 1fr;
+
+    gap: 18px;
+
+    align-items: end;
+}
+
+.bandas-grid .form-campo {
+    margin-top: 0;
 }
 
 
@@ -156,11 +293,6 @@
     margin-top: 0;
 }
 
-
-/* ========================================
-   LABEL
-======================================== */
-
 .form-campo label {
     color: var(--cor-texto);
 
@@ -170,7 +302,7 @@
 
 
 /* ========================================
-   INPUT, SELECT E TEXTAREA
+   INPUTS
 ======================================== */
 
 .form-campo input,
@@ -199,11 +331,6 @@
     color: var(--cor-texto-secundario);
 }
 
-
-/* ========================================
-   FOCO
-======================================== */
-
 .form-campo input:focus,
 .form-campo select:focus,
 .form-campo textarea:focus {
@@ -212,29 +339,13 @@
     box-shadow: 0 0 10px rgba(0, 191, 255, 0.18);
 }
 
-
-/* ========================================
-   SELECT
-======================================== */
-
 .form-campo select {
     cursor: pointer;
 }
 
-
-/* ========================================
-   DATE E TIME
-======================================== */
-
-.form-campo input[type="date"],
 .form-campo input[type="time"] {
     color-scheme: dark;
 }
-
-
-/* ========================================
-   TEXTAREA
-======================================== */
 
 .form-campo textarea {
     min-height: 120px;
@@ -244,7 +355,7 @@
 
 
 /* ========================================
-   TEXTO DE AJUDA
+   AJUDA
 ======================================== */
 
 .form-ajuda {
@@ -262,10 +373,10 @@
 .form-status {
     display: none;
 
+    margin-top: 2px;
+
     font-size: 12px;
     line-height: 1.4;
-
-    margin-top: 2px;
 }
 
 .form-status.ativo {
@@ -286,7 +397,7 @@
 
 
 /* ========================================
-   CAMPOS COM ERRO
+   ERRO / SUCESSO
 ======================================== */
 
 .form-campo input.campo-erro,
@@ -296,11 +407,6 @@
 
     box-shadow: 0 0 10px rgba(255, 77, 103, 0.25);
 }
-
-
-/* ========================================
-   CAMPOS VÁLIDOS
-======================================== */
 
 .form-campo input.campo-sucesso,
 .form-campo select.campo-sucesso,
@@ -312,7 +418,7 @@
 
 
 /* ========================================
-   CHECKBOXES PERSONALIZADOS
+   CHECKBOXES
 ======================================== */
 
 .form-estilos {
@@ -376,12 +482,13 @@
 
 .form-check input:focus-visible+span {
     outline: 2px solid var(--cor-azul);
+
     outline-offset: 3px;
 }
 
 
 /* ========================================
-   RADIO BUTTONS
+   RADIO
 ======================================== */
 
 .form-opcoes {
@@ -413,17 +520,7 @@
 
 
 /* ========================================
-   CAMPOS CONDICIONAIS DE PAGAMENTO
-======================================== */
-
-#campo-valor,
-#campo-percentual {
-    margin-top: 18px;
-}
-
-
-/* ========================================
-   CAMPO DESABILITADO
+   DESABILITADO
 ======================================== */
 
 .form-campo input:disabled,
@@ -444,9 +541,9 @@
 ======================================== */
 
 .criar-solicitacao__status {
-    text-align: right;
-
     margin-top: 5px;
+
+    text-align: right;
 }
 
 
@@ -462,11 +559,6 @@
 
     margin-top: 6px;
 }
-
-
-/* ========================================
-   CANCELAR
-======================================== */
 
 .criar-solicitacao__cancelar {
     min-width: 130px;
@@ -496,11 +588,6 @@
 
     background-color: rgba(0, 191, 255, 0.06);
 }
-
-
-/* ========================================
-   PUBLICAR
-======================================== */
 
 .criar-solicitacao__salvar {
     min-width: 180px;
@@ -548,8 +635,6 @@
 @media (max-width: 800px) {
 
     .criar-solicitacao {
-        align-items: flex-start;
-
         padding: 90px 15px 25px;
     }
 
@@ -557,7 +642,8 @@
         padding: 24px;
     }
 
-    .form-grid {
+    .form-grid,
+    .bandas-grid {
         grid-template-columns: 1fr;
     }
 
@@ -573,6 +659,7 @@
     .criar-solicitacao__status {
         text-align: left;
     }
+
 }
 
 
@@ -580,6 +667,27 @@
 
     .criar-solicitacao {
         padding: 85px 12px 20px;
+    }
+
+    .solicitacoes-menu {
+        padding: 18px 14px;
+    }
+
+    .solicitacoes-menu__icone {
+        display: none;
+    }
+
+    .solicitacoes-menu__conteudo h1 {
+        font-size: 23px;
+    }
+
+    .solicitacoes-menu__acoes {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .solicitacoes-menu__botao {
+        width: 100%;
     }
 
     .criar-solicitacao__card {
@@ -612,21 +720,5 @@
         flex-direction: column;
         align-items: flex-start;
     }
-}
 
-.bandas-grid {
-    display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr;
-    gap: 18px;
-    align-items: end;
-}
-
-.bandas-grid .form-campo {
-    margin-top: 0;
-}
-
-@media (max-width: 800px) {
-    .bandas-grid {
-        grid-template-columns: 1fr;
-    }
 }

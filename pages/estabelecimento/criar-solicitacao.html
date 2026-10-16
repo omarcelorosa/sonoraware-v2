@@ -13,6 +13,7 @@
     <title>Criar Solicitação | Sonoraware</title>
 
     <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/components/header.css">
     <link rel="stylesheet" href="/css/pages/criar-solicitacao.css">
 
 </head>
@@ -24,402 +25,455 @@
 
     <main class="criar-solicitacao">
 
-        <section class="criar-solicitacao__card">
-
-            <div class="criar-solicitacao__cabecalho">
-
-                <h1>Criar solicitação</h1>
-
-                <p>
-                    Publique uma oportunidade e encontre bandas
-                    para o seu evento.
-                </p>
-
-            </div>
+        <div class="criar-solicitacao__container">
 
 
-            <form id="form-criar-solicitacao" class="criar-solicitacao__form">
+            <section class="solicitacoes-menu">
+
+                <div class="solicitacoes-menu__icone">
+                    ✦
+                </div>
 
 
-                <section class="form-secao">
+                <div class="solicitacoes-menu__conteudo">
 
-                    <h2>Informações do evento</h2>
+                    <h1>
+                        Solicitações
+                    </h1>
 
-                    <p class="form-secao__descricao">
-                        Informe os principais dados da oportunidade.
+                    <p>
+                        Crie novas oportunidades e acompanhe as solicitações publicadas.
                     </p>
 
 
-                    <div class="form-campo">
+                    <div class="solicitacoes-menu__acoes">
 
-                        <label for="titulo">
-                            Título da solicitação
-                        </label>
-
-                        <input type="text" id="titulo" name="titulo" placeholder="Ex.: Banda para noite de rock"
-                            minlength="5" maxlength="100" required>
-
-                    </div>
+                        <a href="/pages/estabelecimento/criar-solicitacao.html"
+                            class="solicitacoes-menu__botao solicitacoes-menu__botao--ativo">
+                            + Criar solicitação
+                        </a>
 
 
-                    <div class="form-grid">
-
-                        <div class="form-campo">
-
-                            <label for="data-evento">
-                                Data do evento
-                            </label>
-
-                            <input type="text" id="data-evento" name="dataEvento" placeholder="DD/MM/AAAA"
-                                maxlength="10" inputmode="numeric" autocomplete="off" required>
-
-                        </div>
-
-
-                        <div class="form-campo">
-
-                            <label for="prazo-inscricao">
-                                Prazo para inscrição
-                            </label>
-
-                            <input type="text" id="prazo-inscricao" name="prazoInscricao" placeholder="DD/MM/AAAA"
-                                maxlength="10" inputmode="numeric" autocomplete="off" required>
-
-                        </div>
-
-
-                        <div class="form-campo">
-
-                            <label for="horario-inicio">
-                                Horário de início
-                            </label>
-
-                            <input type="time" id="horario-inicio" name="horarioInicio" required>
-
-                        </div>
-
-
-                        <div class="form-campo">
-
-                            <label for="horario-fim">
-                                Horário de término
-                            </label>
-
-                            <input type="time" id="horario-fim" name="horarioFim" required>
-
-                        </div>
+                        <a href="/pages/estabelecimento/minhas-solicitacoes.html"
+                            class="solicitacoes-menu__botao solicitacoes-menu__botao--secundario">
+                            Minhas solicitações
+                        </a>
 
                     </div>
-
-                </section>
-
-
-                <section class="form-secao">
-
-                    <h2>Bandas procuradas</h2>
-
-                    <p class="form-secao__descricao">
-                        Informe o perfil musical desejado para o evento.
-                    </p>
-
-
-                    <div class="bandas-grid">
-
-                        <div class="form-campo">
-                            <label for="quantidade-bandas">
-                                Quantidade de bandas
-                            </label>
-
-                            <input type="number" id="quantidade-bandas" name="quantidadeBandas" min="1" max="50"
-                                step="1" placeholder="Ex.: 2" required>
-                        </div>
-
-
-                        <div class="form-campo">
-                            <label for="duracao-horas">
-                                Duração - Horas
-                            </label>
-
-                            <input type="number" id="duracao-horas" name="duracaoHoras" min="0" max="24" step="1"
-                                value="0" required>
-                        </div>
-
-
-                        <div class="form-campo">
-                            <label for="duracao-minutos">
-                                Duração - Minutos
-                            </label>
-
-                            <select id="duracao-minutos" name="duracaoMinutos" required>
-                                <option value="0">00</option>
-                                <option value="5">05</option>
-                                <option value="10">10</option>
-                                <option value="15">15</option>
-                                <option value="20">20</option>
-                                <option value="25">25</option>
-                                <option value="30">30</option>
-                                <option value="35">35</option>
-                                <option value="40">40</option>
-                                <option value="45">45</option>
-                                <option value="50">50</option>
-                                <option value="55">55</option>
-                            </select>
-                        </div>
-
-                    </div>
-
-                    <small class="form-status" id="status-duracao"></small>
-
-
-                    <div class="form-subtitulo">
-
-                        <h3>Estilos musicais desejados</h3>
-
-                        <p>
-                            Selecione todos os estilos compatíveis com o evento.
-                        </p>
-
-                    </div>
-
-
-                    <div class="form-estilos">
-
-                        <label class="form-check">
-                            <input type="checkbox" name="estilos" value="rock">
-                            <span>Rock</span>
-                        </label>
-
-                        <label class="form-check">
-                            <input type="checkbox" name="estilos" value="pop">
-                            <span>Pop</span>
-                        </label>
-
-                        <label class="form-check">
-                            <input type="checkbox" name="estilos" value="mpb">
-                            <span>MPB</span>
-                        </label>
-
-                        <label class="form-check">
-                            <input type="checkbox" name="estilos" value="sertanejo">
-                            <span>Sertanejo</span>
-                        </label>
-
-                        <label class="form-check">
-                            <input type="checkbox" name="estilos" value="indie">
-                            <span>Indie</span>
-                        </label>
-
-                        <label class="form-check">
-                            <input type="checkbox" name="estilos" value="pagode">
-                            <span>Pagode</span>
-                        </label>
-
-                        <label class="form-check">
-                            <input type="checkbox" name="estilos" value="samba">
-                            <span>Samba</span>
-                        </label>
-
-                        <label class="form-check">
-                            <input type="checkbox" name="estilos" value="eletronica">
-                            <span>Eletrônica</span>
-                        </label>
-
-                        <label class="form-check">
-                            <input type="checkbox" name="estilos" value="rap">
-                            <span>Rap</span>
-                        </label>
-
-                        <label class="form-check">
-                            <input type="checkbox" name="estilos" value="cover">
-                            <span>Cover</span>
-                        </label>
-
-                        <label class="form-check">
-                            <input type="checkbox" name="estilos" value="outro">
-                            <span>Outro</span>
-                        </label>
-
-                    </div>
-
-
-                    <small class="form-status" id="status-estilos"></small>
-
-                </section>
-
-
-                <section class="form-secao">
-
-                    <h2>Pagamento</h2>
-
-                    <div class="form-campo">
-
-                        <label for="valor-cache">
-                            Valor oferecido por banda
-                        </label>
-
-                        <input type="number" id="valor-cache" name="valorCachePorBanda" min="0" max="1000000"
-                            step="0.01" placeholder="Ex.: 1200,00" required>
-
-                        <small class="form-ajuda">
-                            Informe o valor que será pago para cada banda selecionada.
-                        </small>
-
-                    </div>
-
-
-                    <div class="form-campo">
-
-                        <label>
-                            Está aberto a negociar esse valor?
-                        </label>
-
-
-                        <div class="form-opcoes">
-
-                            <label class="form-radio">
-
-                                <input type="radio" name="aceitaNegociacao" value="sim" required>
-
-                                <span>Sim</span>
-
-                            </label>
-
-
-                            <label class="form-radio">
-
-                                <input type="radio" name="aceitaNegociacao" value="nao">
-
-                                <span>Não</span>
-
-                            </label>
-
-                        </div>
-
-                    </div>
-
-                </section>
-
-
-                <section class="form-secao">
-
-                    <h2>Estrutura para o evento</h2>
-
-                    <p class="form-secao__descricao">
-                        Informe quais recursos estarão disponíveis especificamente neste evento.
-                    </p>
-
-
-                    <div class="form-estilos">
-
-                        <label class="form-check">
-
-                            <input type="checkbox" name="estrutura" value="palco">
-
-                            <span>Palco</span>
-
-                        </label>
-
-
-                        <label class="form-check">
-
-                            <input type="checkbox" name="estrutura" value="som">
-
-                            <span>Sistema de som</span>
-
-                        </label>
-
-
-                        <label class="form-check">
-
-                            <input type="checkbox" name="estrutura" value="iluminacao">
-
-                            <span>Iluminação</span>
-
-                        </label>
-
-
-                        <label class="form-check">
-
-                            <input type="checkbox" name="estrutura" value="microfones">
-
-                            <span>Microfones</span>
-
-                        </label>
-
-
-                        <label class="form-check">
-
-                            <input type="checkbox" name="estrutura" value="mesa-som">
-
-                            <span>Mesa de som</span>
-
-                        </label>
-
-
-                        <label class="form-check">
-
-                            <input type="checkbox" name="estrutura" value="camarim">
-
-                            <span>Camarim</span>
-
-                        </label>
-
-                    </div>
-
-                </section>
-
-
-                <section class="form-secao">
-
-                    <h2>Detalhes da oportunidade</h2>
-
-
-                    <div class="form-campo">
-
-                        <label for="descricao">
-                            Descrição
-                        </label>
-
-                        <textarea id="descricao" name="descricao" minlength="20" maxlength="1500"
-                            placeholder="Descreva o evento, o público esperado, o tipo de apresentação desejada e outras informações importantes..."
-                            required></textarea>
-
-                    </div>
-
-
-                    <div class="form-campo">
-
-                        <label for="requisitos">
-                            Requisitos ou observações
-                        </label>
-
-                        <textarea id="requisitos" name="requisitos" maxlength="1000"
-                            placeholder="Ex.: levar instrumentos próprios, chegar com 2 horas de antecedência..."></textarea>
-
-                    </div>
-
-                </section>
-
-
-                <small class="form-status criar-solicitacao__status" id="status-solicitacao"></small>
-
-
-                <div class="criar-solicitacao__acoes">
-
-                    <a href="/pages/estabelecimento/minhas-solicitacoes.html" class="criar-solicitacao__cancelar">
-                        Cancelar
-                    </a>
-
-
-                    <button type="submit" class="criar-solicitacao__salvar" id="botao-criar-solicitacao">
-                        Publicar solicitação
-                    </button>
 
                 </div>
 
-            </form>
+            </section>
 
-        </section>
+
+            <section class="criar-solicitacao__card">
+
+                <div class="criar-solicitacao__cabecalho">
+
+                    <h1>
+                        Criar solicitação
+                    </h1>
+
+                    <p>
+                        Publique uma oportunidade e encontre bandas
+                        para o seu evento.
+                    </p>
+
+                </div>
+
+
+                <form id="form-criar-solicitacao" class="criar-solicitacao__form">
+
+
+                    <section class="form-secao">
+
+                        <h2>
+                            Informações do evento
+                        </h2>
+
+                        <p class="form-secao__descricao">
+                            Informe os principais dados da oportunidade.
+                        </p>
+
+
+                        <div class="form-campo">
+
+                            <label for="titulo">
+                                Título da solicitação
+                            </label>
+
+                            <input type="text" id="titulo" name="titulo" placeholder="Ex.: Banda para noite de rock"
+                                minlength="5" maxlength="100" required>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+                            <div class="form-campo">
+
+                                <label for="data-evento">
+                                    Data do evento
+                                </label>
+
+                                <input type="text" id="data-evento" name="dataEvento" placeholder="DD/MM/AAAA"
+                                    maxlength="10" inputmode="numeric" autocomplete="off" required>
+
+                            </div>
+
+
+                            <div class="form-campo">
+
+                                <label for="prazo-inscricao">
+                                    Prazo para inscrição
+                                </label>
+
+                                <input type="text" id="prazo-inscricao" name="prazoInscricao" placeholder="DD/MM/AAAA"
+                                    maxlength="10" inputmode="numeric" autocomplete="off" required>
+
+                            </div>
+
+
+                            <div class="form-campo">
+
+                                <label for="horario-inicio">
+                                    Horário de início
+                                </label>
+
+                                <input type="time" id="horario-inicio" name="horarioInicio" required>
+
+                            </div>
+
+
+                            <div class="form-campo">
+
+                                <label for="horario-fim">
+                                    Horário de término
+                                </label>
+
+                                <input type="time" id="horario-fim" name="horarioFim" required>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <section class="form-secao">
+
+                        <h2>
+                            Bandas procuradas
+                        </h2>
+
+                        <p class="form-secao__descricao">
+                            Informe o perfil musical desejado para o evento.
+                        </p>
+
+
+                        <div class="bandas-grid">
+
+                            <div class="form-campo">
+
+                                <label for="quantidade-bandas">
+                                    Quantidade de bandas
+                                </label>
+
+                                <input type="number" id="quantidade-bandas" name="quantidadeBandas" min="1" max="50"
+                                    step="1" placeholder="Ex.: 2" required>
+
+                            </div>
+
+
+                            <div class="form-campo">
+
+                                <label for="duracao-horas">
+                                    Duração - Horas
+                                </label>
+
+                                <input type="number" id="duracao-horas" name="duracaoHoras" min="0" max="24" step="1"
+                                    value="0" required>
+
+                            </div>
+
+
+                            <div class="form-campo">
+
+                                <label for="duracao-minutos">
+                                    Duração - Minutos
+                                </label>
+
+                                <select id="duracao-minutos" name="duracaoMinutos" required>
+
+                                    <option value="0">00</option>
+                                    <option value="5">05</option>
+                                    <option value="10">10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                    <option value="25">25</option>
+                                    <option value="30">30</option>
+                                    <option value="35">35</option>
+                                    <option value="40">40</option>
+                                    <option value="45">45</option>
+                                    <option value="50">50</option>
+                                    <option value="55">55</option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <small class="form-status" id="status-duracao"></small>
+
+
+                        <div class="form-subtitulo">
+
+                            <h3>
+                                Estilos musicais desejados
+                            </h3>
+
+                            <p>
+                                Selecione todos os estilos compatíveis com o evento.
+                            </p>
+
+                        </div>
+
+
+                        <div class="form-estilos">
+
+                            <label class="form-check">
+                                <input type="checkbox" name="estilos" value="rock">
+                                <span>Rock</span>
+                            </label>
+
+                            <label class="form-check">
+                                <input type="checkbox" name="estilos" value="pop">
+                                <span>Pop</span>
+                            </label>
+
+                            <label class="form-check">
+                                <input type="checkbox" name="estilos" value="mpb">
+                                <span>MPB</span>
+                            </label>
+
+                            <label class="form-check">
+                                <input type="checkbox" name="estilos" value="sertanejo">
+                                <span>Sertanejo</span>
+                            </label>
+
+                            <label class="form-check">
+                                <input type="checkbox" name="estilos" value="indie">
+                                <span>Indie</span>
+                            </label>
+
+                            <label class="form-check">
+                                <input type="checkbox" name="estilos" value="pagode">
+                                <span>Pagode</span>
+                            </label>
+
+                            <label class="form-check">
+                                <input type="checkbox" name="estilos" value="samba">
+                                <span>Samba</span>
+                            </label>
+
+                            <label class="form-check">
+                                <input type="checkbox" name="estilos" value="eletronica">
+                                <span>Eletrônica</span>
+                            </label>
+
+                            <label class="form-check">
+                                <input type="checkbox" name="estilos" value="rap">
+                                <span>Rap</span>
+                            </label>
+
+                            <label class="form-check">
+                                <input type="checkbox" name="estilos" value="cover">
+                                <span>Cover</span>
+                            </label>
+
+                            <label class="form-check">
+                                <input type="checkbox" name="estilos" value="outro">
+                                <span>Outro</span>
+                            </label>
+
+                        </div>
+
+
+                        <small class="form-status" id="status-estilos"></small>
+
+                    </section>
+
+
+                    <section class="form-secao">
+
+                        <h2>
+                            Pagamento
+                        </h2>
+
+
+                        <div class="form-campo">
+
+                            <label for="valor-cache">
+                                Valor oferecido por banda
+                            </label>
+
+                            <input type="number" id="valor-cache" name="valorCachePorBanda" min="0" max="1000000"
+                                step="0.01" placeholder="Ex.: 1200,00" required>
+
+                            <small class="form-ajuda">
+                                Informe o valor que será pago para cada banda selecionada.
+                            </small>
+
+                        </div>
+
+
+                        <div class="form-campo">
+
+                            <label>
+                                Está aberto a negociar esse valor?
+                            </label>
+
+
+                            <div class="form-opcoes">
+
+                                <label class="form-radio">
+
+                                    <input type="radio" name="aceitaNegociacao" value="sim" required>
+
+                                    <span>
+                                        Sim
+                                    </span>
+
+                                </label>
+
+
+                                <label class="form-radio">
+
+                                    <input type="radio" name="aceitaNegociacao" value="nao">
+
+                                    <span>
+                                        Não
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <section class="form-secao">
+
+                        <h2>
+                            Estrutura para o evento
+                        </h2>
+
+                        <p class="form-secao__descricao">
+                            Informe quais recursos estarão disponíveis especificamente neste evento.
+                        </p>
+
+
+                        <div class="form-estilos">
+
+                            <label class="form-check">
+                                <input type="checkbox" name="estrutura" value="palco">
+                                <span>Palco</span>
+                            </label>
+
+
+                            <label class="form-check">
+                                <input type="checkbox" name="estrutura" value="som">
+                                <span>Sistema de som</span>
+                            </label>
+
+
+                            <label class="form-check">
+                                <input type="checkbox" name="estrutura" value="iluminacao">
+                                <span>Iluminação</span>
+                            </label>
+
+
+                            <label class="form-check">
+                                <input type="checkbox" name="estrutura" value="microfones">
+                                <span>Microfones</span>
+                            </label>
+
+
+                            <label class="form-check">
+                                <input type="checkbox" name="estrutura" value="mesa-som">
+                                <span>Mesa de som</span>
+                            </label>
+
+
+                            <label class="form-check">
+                                <input type="checkbox" name="estrutura" value="camarim">
+                                <span>Camarim</span>
+                            </label>
+
+                        </div>
+
+                    </section>
+
+
+                    <section class="form-secao">
+
+                        <h2>
+                            Detalhes da oportunidade
+                        </h2>
+
+
+                        <div class="form-campo">
+
+                            <label for="descricao">
+                                Descrição
+                            </label>
+
+                            <textarea id="descricao" name="descricao" minlength="20" maxlength="1500"
+                                placeholder="Descreva o evento, o público esperado, o tipo de apresentação desejada e outras informações importantes..."
+                                required></textarea>
+
+                        </div>
+
+
+                        <div class="form-campo">
+
+                            <label for="requisitos">
+                                Requisitos ou observações
+                            </label>
+
+                            <textarea id="requisitos" name="requisitos" maxlength="1000"
+                                placeholder="Ex.: levar instrumentos próprios, chegar com 2 horas de antecedência..."></textarea>
+
+                        </div>
+
+                    </section>
+
+
+                    <small class="form-status criar-solicitacao__status" id="status-solicitacao"></small>
+
+
+                    <div class="criar-solicitacao__acoes">
+
+                        <a href="/pages/estabelecimento/minhas-solicitacoes.html" class="criar-solicitacao__cancelar">
+                            Cancelar
+                        </a>
+
+
+                        <button type="submit" class="criar-solicitacao__salvar" id="botao-criar-solicitacao">
+                            Publicar solicitação
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+        </div>
 
     </main>
 
