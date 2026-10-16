@@ -1,47 +1,101 @@
-const listaSolicitacoes = document.getElementById(
-    "lista-solicitacoes"
-);
+const campoBusca = document.getElementById("buscar-inscricao");
+const filtroStatus = document.getElementById("filtro-status");
+const botaoLimparFiltros = document.getElementById("limpar-filtros");
 
-const estadoVazio = document.getElementById(
-    "solicitacoes-vazio"
-);
+const listaInscricoes = document.getElementById("lista-inscricoes");
+const estadoVazio = document.getElementById("inscricoes-vazio");
 
-const cardsSolicitacoes = document.querySelectorAll(
-    ".solicitacao-card"
-);
+const cardsInscricoes = document.querySelectorAll(".inscricao-card");
 
 
-function atualizarEstadoLista() {
-    const quantidadeSolicitacoes =
-        cardsSolicitacoes.length;
-
-    if (quantidadeSolicitacoes === 0) {
-        listaSolicitacoes.hidden = true;
-        estadoVazio.hidden = false;
-
-        return;
-    }
-
-    listaSolicitacoes.hidden = false;
-    estadoVazio.hidden = true;
+function normalizarTexto(texto) {
+    return texto
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .trim();
 }
 
 
-function prepararSolicitacoes() {
-    cardsSolicitacoes.forEach(
-        (card) => {
-            const status =
-                card.dataset.status;
+function aplicarFiltros() {
+    const busca = normalizarTexto(campoBusca.value);
 
-            if (status === "encerrada") {
-                card.classList.add(
-                    "solicitacao-card--encerrada"
-                );
-            }
+    const statusSelecionado = filtroStatus.value;
+
+    let quantidadeVisivel = 0;
+
+
+    cardsInscricoes.forEach(card => {
+        const nomeEvento = normalizarTexto(
+            card.querySelector(
+                ".inscricao-card__titulo h2"
+            ).textContent
+        );
+
+        const estabelecimento = normalizarTexto(
+            card.querySelector(
+                ".inscricao-card__titulo p"
+            ).textContent
+        );
+
+        const status = card.dataset.status;
+
+
+        const correspondeBusca =
+            busca === "" ||
+            nomeEvento.includes(busca) ||
+            estabelecimento.includes(busca);
+
+
+        const correspondeStatus =
+            statusSelecionado === "todos" ||
+            status === statusSelecionado;
+
+
+        if (
+            correspondeBusca &&
+            correspondeStatus
+        ) {
+            card.style.display = "grid";
+            quantidadeVisivel++;
+        } else {
+            card.style.display = "none";
         }
-    );
+    });
+
+
+    if (quantidadeVisivel === 0) {
+        listaInscricoes.style.display = "none";
+        estadoVazio.hidden = false;
+    } else {
+        listaInscricoes.style.display = "flex";
+        estadoVazio.hidden = true;
+    }
 }
 
 
-prepararSolicitacoes();
-atualizarEstadoLista();
+function limparFiltros() {
+    campoBusca.value = "";
+    filtroStatus.value = "todos";
+
+    aplicarFiltros();
+}
+
+
+campoBusca.addEventListener(
+    "input",
+    aplicarFiltros
+);
+
+filtroStatus.addEventListener(
+    "change",
+    aplicarFiltros
+);
+
+botaoLimparFiltros.addEventListener(
+    "click",
+    limparFiltros
+);
+
+
+aplicarFiltros();

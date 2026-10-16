@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="/assets/logo/favicon.png">
+
+    <title>Minhas Inscrições | Sonoraware</title>
+
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/components/header.css">
+    <link rel="stylesheet" href="/css/pages/minhas-inscricoes.css">
+</head>
+
+<body>
+
+    <div id="header-container"></div>
+
+
+    <main class="minhas-inscricoes">
+
+        <div class="minhas-inscricoes__container">
+
+
+            <section class="inscricoes-cabecalho">
+
+                <div class="inscricoes-cabecalho__icone">
+                    ✦
+                </div>
+
+                <div class="inscricoes-cabecalho__conteudo">
+
+                    <h1>
+                        Minhas inscrições
+                    </h1>
+
+                    <p>
+                        Acompanhe as oportunidades em que sua banda se candidatou.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="inscricoes-filtros">
+
+                <div class="filtro-busca">
+
+                    <input type="search" id="buscar-inscricao" placeholder="Buscar evento ou estabelecimento...">
+
+                </div>
+
+
+                <div class="filtro-select">
+
+                    <select id="filtro-status">
+
+                        <option value="todos">
+                            Todos os status
+                        </option>
+
+                        <option value="enviada">
+                            Enviada
+                        </option>
+
+                        <option value="analise">
+                            Em análise
+                        </option>
+
+                        <option value="aceita">
+                            Aceita
+                        </option>
+
+                        <option value="recusada">
+                            Recusada
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button type="button" class="filtros-limpar" id="limpar-filtros">
+                    Limpar filtros
+                </button>
+
+            </section>
+
+
+            <section class="inscricoes-lista" id="lista-inscricoes">
+
+
+                <article class="inscricao-card" data-status="analise">
+
+                    <div class="inscricao-card__imagem">
+
+                        <img src="/assets/images/eventos/evento1.jpg" alt="Rock Night no Black House">
+
+                    </div>
+
+
+                    <div class="inscricao-card__principal">
+
+                        <div class="inscricao-card__titulo">
+
+                            <div>
+
+                                <h2>
+                                    Rock Night no Black House
+                                </h2>
+
+                                <p>
+                                    Black House
+                                </p>
+
+                            </div>
+
+
+                            <span class="status status--analise">
+                                Em análise
+                            </span>
+
+                        </div>
+
+
+                        <div class="inscricao-card__dados">
+
+                            <span>
+                                📍 Franca, SP
+                            </span>
+
+                            <span>
+                                📅 12/11/2026
+                            </span>
+
+                            <span>
+                                🕒 20:00
+                            </span>
+
+                            <span>
+                                💰 R$ 1.500,00 por banda
+                            </span>
+
+                        </div>
+
+
+                        <div class="inscricao-card__tags">
+
+                            <span>
+                                Rock
+                            </span>
+
+                            <span>
+                                Indie
+                            </span>
+
+                            <span>
+                                Alternativo
+                            </span>
+
+                        </div>
+
+
+                        <p class="inscricao-card__descricao">
+                            Evento voltado para bandas autorais da região
+                            com estrutura de palco e sonorização.
+                        </p>
+
+                    </div>
+
+
+                    <div class="inscricao-card__informacoes">
+
+                        <div>
+
+                            <span>
+                                Inscrição enviada em
+                            </span>
+
+                            <strong>
+                                05/10/2026
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Prazo da oportunidade
+                            </span>
+
+                            <strong>
+                                10/10/2026
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="inscricao-card__acoes">
+
+                        <a href="/pages/eventos/detalhes-evento.html" class="inscricao-card__botao">
+                            Ver evento
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="inscricao-card" data-status="aceita">
+
+                    <div class="inscricao-card__imagem">
+
+                        <img src="/assets/images/eventos/evento2.jpg" alt="Festival de Verão">
+
+                    </div>
+
+
+                    <div class="inscricao-card__principal">
+
+                        <div class="inscricao-card__titulo">
+
+                            <div>
+
+                                <h2>
+                                    Festival de Verão
+                                </h2>
+
+                                <p>
+                                    Arena Central
+                                </p>
+
+                            </div>
+
+
+                            <span class="status status--aceita">
+                                Aceita
+                            </span>
+
+                        </div>
+
+
+                        <div class="inscricao-card__dados">
+
+                            <span>
+                                📍 Ribeirão Preto, SP
+                            </span>
+
+                            <span>
+                                📅 18/12/2026
+                            </span>
+
+                            <span>
+                                🕒 19:00
+                            </span>
+
+                            <span>
+                                💰 R$ 1.200,00 por banda
+                            </span>
+
+                        </div>
+
+
+                        <div class="inscricao-card__tags">
+
+                            <span>
+                                Pop
+                            </span>
+
+                            <span>
+                                Rock
+                            </span>
+
+                        </div>
+
+
+                        <p class="inscricao-card__descricao">
+                            Festival com apresentações de bandas locais
+                            e regionais durante toda a noite.
+                        </p>
+
+                    </div>
+
+
+                    <div class="inscricao-card__informacoes">
+
+                        <div>
+
+                            <span>
+                                Inscrição enviada em
+                            </span>
+
+                            <strong>
+                                28/09/2026
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Prazo da oportunidade
+                            </span>
+
+                            <strong>
+                                01/12/2026
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="inscricao-card__acoes">
+
+                        <a href="/pages/eventos/detalhes-evento.html" class="inscricao-card__botao">
+                            Ver evento
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="inscricao-card" data-status="recusada">
+
+                    <div class="inscricao-card__imagem">
+
+                        <img src="/assets/images/eventos/evento3.jpg" alt="Noite Brasileira">
+
+                    </div>
+
+
+                    <div class="inscricao-card__principal">
+
+                        <div class="inscricao-card__titulo">
+
+                            <div>
+
+                                <h2>
+                                    Noite Brasileira
+                                </h2>
+
+                                <p>
+                                    Espaço Cultural Aurora
+                                </p>
+
+                            </div>
+
+
+                            <span class="status status--recusada">
+                                Recusada
+                            </span>
+
+                        </div>
+
+
+                        <div class="inscricao-card__dados">
+
+                            <span>
+                                📍 São Carlos, SP
+                            </span>
+
+                            <span>
+                                📅 23/01/2027
+                            </span>
+
+                            <span>
+                                🕒 21:00
+                            </span>
+
+                            <span>
+                                💰 R$ 900,00 por banda
+                            </span>
+
+                        </div>
+
+
+                        <div class="inscricao-card__tags">
+
+                            <span>
+                                MPB
+                            </span>
+
+                            <span>
+                                Samba
+                            </span>
+
+                        </div>
+
+
+                        <p class="inscricao-card__descricao">
+                            Evento dedicado à música brasileira,
+                            com repertórios autorais e releituras.
+                        </p>
+
+                    </div>
+
+
+                    <div class="inscricao-card__informacoes">
+
+                        <div>
+
+                            <span>
+                                Inscrição enviada em
+                            </span>
+
+                            <strong>
+                                20/09/2026
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Prazo da oportunidade
+                            </span>
+
+                            <strong>
+                                10/01/2027
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="inscricao-card__acoes">
+
+                        <a href="/pages/eventos/detalhes-evento.html" class="inscricao-card__botao">
+                            Ver evento
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </section>
+
+
+            <div class="inscricoes-vazio" id="inscricoes-vazio" hidden>
+
+                <h2>
+                    Nenhuma inscrição encontrada
+                </h2>
+
+                <p>
+                    Você ainda não possui inscrições com os filtros selecionados.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <script src="/js/global.js"></script>
+    <script src="/js/pages/minhas-incricoes.js"></script>
+
+</body>
+
+</html>
