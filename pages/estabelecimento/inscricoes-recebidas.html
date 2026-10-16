@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="/assets/logo/favicon.png">
+
+    <title>Inscrições Recebidas | Sonoraware</title>
+
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/components/header.css">
+    <link rel="stylesheet" href="/css/pages/inscricoes-recebidas.css">
+
+</head>
+
+<body>
+
+    <div id="header-container"></div>
+
+
+    <main class="inscricoes-recebidas">
+
+        <div class="inscricoes-recebidas__container">
+
+
+            <section class="inscricoes-cabecalho">
+
+                <div class="inscricoes-cabecalho__icone">
+                    👥
+                </div>
+
+
+                <div class="inscricoes-cabecalho__conteudo">
+
+                    <h1>
+                        Inscrições recebidas
+                    </h1>
+
+                    <p>
+                        Analise as bandas candidatas para a sua solicitação.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="evento-resumo">
+
+                <div class="evento-resumo__imagem">
+
+                    <img src="/assets/images/eventos/evento1.jpg" alt="Imagem do evento">
+
+                </div>
+
+
+                <div class="evento-resumo__conteudo">
+
+                    <h2>
+                        Rock Night no Black House
+                    </h2>
+
+
+                    <div class="evento-resumo__dados">
+
+                        <span>
+                            📍 Black House - Franca, SP
+                        </span>
+
+                        <span>
+                            📅 12/11/2026
+                        </span>
+
+                        <span>
+                            🕒 20:00
+                        </span>
+
+                        <span>
+                            💰 R$ 1.500,00 por banda
+                        </span>
+
+                    </div>
+
+
+                    <div class="evento-resumo__tags">
+
+                        <span>
+                            Rock
+                        </span>
+
+                        <span>
+                            Indie
+                        </span>
+
+                        <span>
+                            Alternativo
+                        </span>
+
+                    </div>
+
+
+                    <p class="evento-resumo__descricao">
+                        Evento especial com foco em bandas autorais da região.
+                    </p>
+
+                </div>
+
+
+                <div class="evento-resumo__estatisticas">
+
+                    <div class="evento-estatistica">
+
+                        <strong>
+                            6
+                        </strong>
+
+                        <span>
+                            bandas inscritas
+                        </span>
+
+                    </div>
+
+
+                    <div class="evento-estatistica">
+
+                        <strong>
+                            2
+                        </strong>
+
+                        <span>
+                            vagas
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="evento-resumo__prazo">
+
+                    <span>
+                        Prazo de inscrições
+                    </span>
+
+                    <strong>
+                        até 10/10/2026
+                    </strong>
+
+
+                    <a href="/pages/eventos/detalhes-evento.html" class="evento-resumo__detalhes">
+                        Ver detalhes do evento
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <section class="inscricoes-filtros">
+
+                <div class="filtro-busca">
+
+                    <input type="search" id="buscar-banda" placeholder="Buscar bandas inscritas...">
+
+                </div>
+
+
+                <div class="filtro-select">
+
+                    <select id="filtro-estilo">
+
+                        <option value="todos">
+                            Estilo musical
+                        </option>
+
+                        <option value="rock">
+                            Rock
+                        </option>
+
+                        <option value="indie">
+                            Indie
+                        </option>
+
+                        <option value="mpb">
+                            MPB
+                        </option>
+
+                        <option value="samba">
+                            Samba
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="filtro-select">
+
+                    <select id="filtro-cidade">
+
+                        <option value="todas">
+                            Cidade/Estado
+                        </option>
+
+                        <option value="franca">
+                            Franca, SP
+                        </option>
+
+                        <option value="ribeirao-preto">
+                            Ribeirão Preto, SP
+                        </option>
+
+                        <option value="sao-carlos">
+                            São Carlos, SP
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="filtro-select">
+
+                    <select id="filtro-status">
+
+                        <option value="todos">
+                            Status da inscrição
+                        </option>
+
+                        <option value="nova">
+                            Nova inscrição
+                        </option>
+
+                        <option value="analise">
+                            Em análise
+                        </option>
+
+                        <option value="pre-selecionada">
+                            Pré-selecionada
+                        </option>
+
+                        <option value="aceita">
+                            Aceita
+                        </option>
+
+                        <option value="recusada">
+                            Recusada
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button type="button" class="filtros-limpar" id="limpar-filtros">
+                    Limpar filtros
+                </button>
+
+            </section>
+
+
+            <section class="bandas-lista" id="lista-bandas">
+
+
+                <article class="banda-card" data-status="nova" data-estilos="rock alternativo indie"
+                    data-cidade="franca">
+
+                    <div class="banda-card__imagem">
+
+                        <img src="/assets/images/bandas/banda1.jpg" alt="Banda Eclipse">
+
+                    </div>
+
+
+                    <div class="banda-card__principal">
+
+                        <h2>
+                            Banda Eclipse
+                        </h2>
+
+                        <p class="banda-card__local">
+                            📍 Franca, SP
+                        </p>
+
+
+                        <div class="banda-card__tags">
+
+                            <span>Rock</span>
+                            <span>Alternativo</span>
+                            <span>Indie</span>
+
+                        </div>
+
+
+                        <p class="banda-card__descricao">
+                            Banda autoral com influências do rock alternativo,
+                            trazendo energia e letras sobre a vida urbana.
+                        </p>
+
+                    </div>
+
+
+                    <div class="banda-card__informacoes">
+
+                        <span>
+                            👥 5 integrantes
+                        </span>
+
+                        <span>
+                            ★ Mais de 5 anos
+                        </span>
+
+                        <span>
+                            💰 R$ 1.200,00 sugerido
+                        </span>
+
+                        <span>
+                            📅 Disponível na data
+                        </span>
+
+                    </div>
+
+
+                    <div class="banda-card__status">
+
+                        <span class="status status--nova">
+                            Nova inscrição
+                        </span>
+
+                        <small>
+                            Inscrita em 05/10/2026
+                        </small>
+
+                    </div>
+
+
+                    <div class="banda-card__acoes">
+
+                        <a href="/pages/banda/perfil-banda.html" class="banda-card__botao banda-card__botao--perfil">
+                            Ver perfil
+                        </a>
+
+
+                        <button type="button" class="banda-card__botao banda-card__botao--aceitar">
+                            ✓ Aceitar
+                        </button>
+
+
+                        <button type="button" class="banda-card__botao banda-card__botao--recusar">
+                            ✕ Recusar
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="banda-card" data-status="analise" data-estilos="blues rock soul"
+                    data-cidade="ribeirao-preto">
+
+                    <div class="banda-card__imagem">
+
+                        <img src="/assets/images/bandas/banda2.jpg" alt="Os Noturnos">
+
+                    </div>
+
+
+                    <div class="banda-card__principal">
+
+                        <h2>
+                            Os Noturnos
+                        </h2>
+
+                        <p class="banda-card__local">
+                            📍 Ribeirão Preto, SP
+                        </p>
+
+
+                        <div class="banda-card__tags">
+
+                            <span>Blues</span>
+                            <span>Rock</span>
+                            <span>Soul</span>
+
+                        </div>
+
+
+                        <p class="banda-card__descricao">
+                            Trio com sonoridade moderna e clássica,
+                            unindo blues tradicional e rock contemporâneo.
+                        </p>
+
+                    </div>
+
+
+                    <div class="banda-card__informacoes">
+
+                        <span>
+                            👥 3 integrantes
+                        </span>
+
+                        <span>
+                            ★ Mais de 8 anos
+                        </span>
+
+                        <span>
+                            💰 R$ 1.500,00 sugerido
+                        </span>
+
+                        <span>
+                            📅 Disponível na data
+                        </span>
+
+                    </div>
+
+
+                    <div class="banda-card__status">
+
+                        <span class="status status--analise">
+                            Em análise
+                        </span>
+
+                        <small>
+                            Inscrita em 04/10/2026
+                        </small>
+
+                    </div>
+
+
+                    <div class="banda-card__acoes">
+
+                        <a href="/pages/banda/perfil-banda.html" class="banda-card__botao banda-card__botao--perfil">
+                            Ver perfil
+                        </a>
+
+
+                        <button type="button" class="banda-card__botao banda-card__botao--aceitar">
+                            ✓ Aceitar
+                        </button>
+
+
+                        <button type="button" class="banda-card__botao banda-card__botao--recusar">
+                            ✕ Recusar
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="banda-card" data-status="pre-selecionada" data-estilos="pop rock indie mpb"
+                    data-cidade="sao-carlos">
+
+                    <div class="banda-card__imagem">
+
+                        <img src="/assets/images/bandas/banda3.jpg" alt="Vibe Central">
+
+                    </div>
+
+
+                    <div class="banda-card__principal">
+
+                        <h2>
+                            Vibe Central
+                        </h2>
+
+                        <p class="banda-card__local">
+                            📍 São Carlos, SP
+                        </p>
+
+
+                        <div class="banda-card__tags">
+
+                            <span>Pop Rock</span>
+                            <span>Indie</span>
+                            <span>MPB</span>
+
+                        </div>
+
+
+                        <p class="banda-card__descricao">
+                            Banda versátil com repertório autoral
+                            e releituras de clássicos do pop rock nacional.
+                        </p>
+
+                    </div>
+
+
+                    <div class="banda-card__informacoes">
+
+                        <span>
+                            👥 4 integrantes
+                        </span>
+
+                        <span>
+                            ★ Mais de 3 anos
+                        </span>
+
+                        <span>
+                            💰 R$ 1.000,00 sugerido
+                        </span>
+
+                        <span>
+                            📅 Disponível na data
+                        </span>
+
+                    </div>
+
+
+                    <div class="banda-card__status">
+
+                        <span class="status status--pre-selecionada">
+                            Pré-selecionada
+                        </span>
+
+                        <small>
+                            Inscrita em 03/10/2026
+                        </small>
+
+                    </div>
+
+
+                    <div class="banda-card__acoes">
+
+                        <a href="/pages/banda/perfil-banda.html" class="banda-card__botao banda-card__botao--perfil">
+                            Ver perfil
+                        </a>
+
+
+                        <button type="button" class="banda-card__botao banda-card__botao--aceitar">
+                            ✓ Aceitar
+                        </button>
+
+
+                        <button type="button" class="banda-card__botao banda-card__botao--recusar">
+                            ✕ Recusar
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </section>
+
+
+            <div class="bandas-vazio" id="bandas-vazio" hidden>
+
+                <h2>
+                    Nenhuma banda encontrada
+                </h2>
+
+                <p>
+                    Não existem inscrições que correspondam aos filtros selecionados.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <script src="/js/global.js"></script>
+    <script src="/js/pages/inscricoes-recebidas.js"></script>
+
+</body>
+
+</html>

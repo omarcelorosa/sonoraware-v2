@@ -1,0 +1,850 @@
+.inscricoes-recebidas {
+    min-height: 100vh;
+
+    padding: 100px 20px 40px;
+}
+
+.inscricoes-recebidas__container {
+    width: 100%;
+    max-width: 1280px;
+
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+.inscricoes-cabecalho {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 22px 24px;
+
+    margin-bottom: 18px;
+
+    background-color: rgba(3, 12, 30, 0.94);
+
+    border: 1px solid rgba(0, 191, 255, 0.3);
+    border-radius: 18px;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 0 25px rgba(0, 140, 255, 0.08);
+}
+
+.inscricoes-cabecalho__icone {
+    width: 54px;
+    height: 54px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background-color: rgba(126, 50, 255, 0.14);
+
+    border: 1px solid rgba(170, 70, 255, 0.45);
+
+    font-size: 26px;
+}
+
+.inscricoes-cabecalho__conteudo h1 {
+    margin-bottom: 5px;
+
+    font-size: 30px;
+}
+
+.inscricoes-cabecalho__conteudo p {
+    color: var(--cor-texto-secundario);
+
+    font-size: 15px;
+}
+
+
+/* ========================================
+   RESUMO DO EVENTO
+======================================== */
+
+.evento-resumo {
+    display: grid;
+
+    grid-template-columns: 220px minmax(0, 1fr) 220px 210px;
+
+    gap: 18px;
+
+    align-items: stretch;
+
+    padding: 16px;
+
+    margin-bottom: 18px;
+
+    background-color: rgba(3, 12, 30, 0.95);
+
+    border: 1px solid rgba(110, 60, 255, 0.55);
+    border-radius: 18px;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 0 22px rgba(126, 50, 255, 0.09);
+}
+
+
+/* ========================================
+   IMAGEM DO EVENTO
+======================================== */
+
+.evento-resumo__imagem {
+    width: 220px;
+    height: 120px;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    background-color: rgba(12, 29, 54, 0.9);
+}
+
+.evento-resumo__imagem img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* ========================================
+   CONTEÚDO DO EVENTO
+======================================== */
+
+.evento-resumo__conteudo {
+    min-width: 0;
+}
+
+.evento-resumo__conteudo h2 {
+    margin-bottom: 10px;
+
+    font-size: 22px;
+}
+
+.evento-resumo__dados {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px 18px;
+
+    margin-bottom: 10px;
+}
+
+.evento-resumo__dados span {
+    color: var(--cor-texto-secundario);
+
+    font-size: 13px;
+}
+
+.evento-resumo__tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-bottom: 9px;
+}
+
+.evento-resumo__tags span {
+    padding: 5px 11px;
+
+    border-radius: 999px;
+
+    background-color: rgba(0, 191, 255, 0.1);
+
+    border: 1px solid rgba(0, 191, 255, 0.25);
+
+    color: var(--cor-azul);
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.evento-resumo__descricao {
+    color: var(--cor-texto-secundario);
+
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+
+/* ========================================
+   ESTATÍSTICAS
+======================================== */
+
+.evento-resumo__estatisticas {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+
+    padding: 14px;
+
+    background-color: rgba(8, 20, 42, 0.7);
+
+    border: 1px solid rgba(0, 191, 255, 0.2);
+    border-radius: 14px;
+}
+
+.evento-estatistica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.evento-estatistica+.evento-estatistica {
+    border-left: 1px solid rgba(170, 183, 207, 0.15);
+}
+
+.evento-estatistica strong {
+    margin-bottom: 3px;
+
+    color: var(--cor-texto);
+
+    font-size: 27px;
+}
+
+.evento-estatistica span {
+    color: var(--cor-texto-secundario);
+
+    font-size: 11px;
+}
+
+
+/* ========================================
+   PRAZO
+======================================== */
+
+.evento-resumo__prazo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 5px;
+
+    padding-left: 18px;
+
+    border-left: 1px solid rgba(170, 183, 207, 0.18);
+}
+
+.evento-resumo__prazo span {
+    color: var(--cor-texto-secundario);
+
+    font-size: 12px;
+}
+
+.evento-resumo__prazo strong {
+    margin-bottom: 10px;
+
+    font-size: 14px;
+}
+
+.evento-resumo__detalhes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 12px;
+
+    border-radius: 10px;
+
+    background: linear-gradient(90deg,
+            #007bff,
+            #00bfff);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.evento-resumo__detalhes:hover {
+    transform: translateY(-1px);
+
+    box-shadow: 0 0 14px rgba(0, 191, 255, 0.28);
+}
+
+
+/* ========================================
+   FILTROS
+======================================== */
+
+.inscricoes-filtros {
+    display: grid;
+
+    grid-template-columns: 1.4fr repeat(3, 1fr) auto;
+
+    gap: 12px;
+
+    align-items: center;
+
+    margin-bottom: 16px;
+}
+
+.filtro-busca input,
+.filtro-select select {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    background-color: rgba(3, 12, 30, 0.9);
+
+    border: 1px solid rgba(0, 191, 255, 0.3);
+    border-radius: 11px;
+
+    color: var(--cor-texto);
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.filtro-busca input::placeholder {
+    color: var(--cor-texto-secundario);
+}
+
+.filtro-busca input:focus,
+.filtro-select select:focus {
+    border-color: var(--cor-azul);
+
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.15);
+}
+
+.filtro-select select {
+    cursor: pointer;
+}
+
+.filtros-limpar {
+    padding: 11px 14px;
+
+    background-color: transparent;
+
+    border: none;
+
+    color: var(--cor-azul);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.filtros-limpar:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   LISTA DE BANDAS
+======================================== */
+
+.bandas-lista {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* ========================================
+   CARD DA BANDA
+======================================== */
+
+.banda-card {
+    display: grid;
+
+    grid-template-columns:
+        190px minmax(0, 1.5fr) minmax(180px, 0.8fr) 160px 300px;
+
+    gap: 16px;
+
+    align-items: center;
+
+    padding: 12px;
+
+    background-color: rgba(3, 12, 30, 0.95);
+
+    border: 1px solid rgba(126, 50, 255, 0.65);
+    border-radius: 16px;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 0 18px rgba(126, 50, 255, 0.07);
+
+    transition: 0.3s;
+}
+
+.banda-card:hover {
+    border-color: rgba(0, 191, 255, 0.55);
+
+    transform: translateY(-1px);
+}
+
+
+/* ========================================
+   IMAGEM DA BANDA
+======================================== */
+
+.banda-card__imagem {
+    width: 190px;
+    height: 105px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background-color: rgba(12, 29, 54, 0.9);
+}
+
+.banda-card__imagem img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* ========================================
+   PRINCIPAL
+======================================== */
+
+.banda-card__principal {
+    min-width: 0;
+}
+
+.banda-card__principal h2 {
+    margin-bottom: 4px;
+
+    font-size: 18px;
+}
+
+.banda-card__local {
+    margin-bottom: 7px;
+
+    color: var(--cor-texto-secundario);
+
+    font-size: 12px;
+}
+
+.banda-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin-bottom: 7px;
+}
+
+.banda-card__tags span {
+    padding: 4px 9px;
+
+    border-radius: 999px;
+
+    background-color: rgba(0, 191, 255, 0.09);
+
+    border: 1px solid rgba(0, 191, 255, 0.23);
+
+    color: var(--cor-azul);
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.banda-card__descricao {
+    color: var(--cor-texto-secundario);
+
+    font-size: 11px;
+    line-height: 1.35;
+}
+
+
+/* ========================================
+   INFORMAÇÕES DA BANDA
+======================================== */
+
+.banda-card__informacoes {
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+
+    padding-left: 16px;
+
+    border-left: 1px solid rgba(170, 183, 207, 0.15);
+}
+
+.banda-card__informacoes span {
+    color: var(--cor-texto-secundario);
+
+    font-size: 11px;
+}
+
+
+/* ========================================
+   STATUS
+======================================== */
+
+.banda-card__status {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    padding-left: 16px;
+
+    border-left: 1px solid rgba(170, 183, 207, 0.15);
+}
+
+.banda-card__status small {
+    color: var(--cor-texto-secundario);
+
+    font-size: 10px;
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 6px 11px;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.status--nova {
+    color: #00e8a0;
+
+    background-color: rgba(0, 232, 160, 0.1);
+
+    border: 1px solid rgba(0, 232, 160, 0.4);
+}
+
+.status--analise {
+    color: #ffc83d;
+
+    background-color: rgba(255, 200, 61, 0.1);
+
+    border: 1px solid rgba(255, 200, 61, 0.45);
+}
+
+.status--pre-selecionada {
+    color: #e96aff;
+
+    background-color: rgba(233, 106, 255, 0.1);
+
+    border: 1px solid rgba(233, 106, 255, 0.45);
+}
+
+.status--aceita {
+    color: #00e8a0;
+
+    background-color: rgba(0, 232, 160, 0.12);
+
+    border: 1px solid rgba(0, 232, 160, 0.45);
+}
+
+.status--recusada {
+    color: #ff5c74;
+
+    background-color: rgba(255, 92, 116, 0.1);
+
+    border: 1px solid rgba(255, 92, 116, 0.4);
+}
+
+
+/* ========================================
+   AÇÕES
+======================================== */
+
+.banda-card__acoes {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 9px;
+}
+
+.banda-card__botao {
+    min-height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 9px 11px;
+
+    border-radius: 9px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.banda-card__botao--perfil {
+    background-color: rgba(0, 123, 255, 0.08);
+
+    border: 1px solid #008cff;
+
+    color: #49b6ff;
+}
+
+.banda-card__botao--perfil:hover {
+    background-color: rgba(0, 140, 255, 0.18);
+}
+
+.banda-card__botao--aceitar {
+    background-color: rgba(0, 232, 160, 0.07);
+
+    border: 1px solid #00d894;
+
+    color: #00e8a0;
+}
+
+.banda-card__botao--aceitar:hover {
+    background-color: rgba(0, 232, 160, 0.16);
+}
+
+.banda-card__botao--recusar {
+    background-color: rgba(255, 77, 103, 0.07);
+
+    border: 1px solid #ff4d67;
+
+    color: #ff6076;
+}
+
+.banda-card__botao--recusar:hover {
+    background-color: rgba(255, 77, 103, 0.15);
+}
+
+
+/* ========================================
+   ESTADO VAZIO
+======================================== */
+
+.bandas-vazio {
+    padding: 50px 20px;
+
+    text-align: center;
+
+    background-color: rgba(3, 12, 30, 0.92);
+
+    border: 1px solid rgba(170, 183, 207, 0.15);
+    border-radius: 18px;
+}
+
+.bandas-vazio h2 {
+    margin-bottom: 8px;
+
+    font-size: 20px;
+}
+
+.bandas-vazio p {
+    color: var(--cor-texto-secundario);
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 1150px) {
+
+    .evento-resumo {
+        grid-template-columns: 180px 1fr 200px;
+    }
+
+    .evento-resumo__imagem {
+        width: 180px;
+    }
+
+    .evento-resumo__prazo {
+        grid-column: 1 / -1;
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 12px 0 0;
+
+        border-left: none;
+        border-top: 1px solid rgba(170, 183, 207, 0.15);
+    }
+
+
+    .banda-card {
+        grid-template-columns:
+            160px minmax(0, 1fr) 180px;
+    }
+
+    .banda-card__imagem {
+        width: 160px;
+        height: 100px;
+    }
+
+    .banda-card__status {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .banda-card__acoes {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .inscricoes-filtros {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filtros-limpar {
+        grid-column: 1 / -1;
+    }
+
+    .evento-resumo {
+        grid-template-columns: 150px 1fr;
+    }
+
+    .evento-resumo__imagem {
+        width: 150px;
+        height: 110px;
+    }
+
+    .evento-resumo__estatisticas {
+        grid-column: 1 / -1;
+    }
+
+
+    .banda-card {
+        grid-template-columns: 140px 1fr;
+    }
+
+    .banda-card__imagem {
+        width: 140px;
+    }
+
+    .banda-card__informacoes,
+    .banda-card__status,
+    .banda-card__acoes {
+        grid-column: 1 / -1;
+    }
+
+    .banda-card__informacoes {
+        border-left: none;
+        border-top: 1px solid rgba(170, 183, 207, 0.15);
+
+        padding: 12px 0 0;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .inscricoes-recebidas {
+        padding: 90px 12px 25px;
+    }
+
+    .inscricoes-cabecalho {
+        padding: 18px 14px;
+    }
+
+    .inscricoes-cabecalho__icone {
+        display: none;
+    }
+
+    .inscricoes-cabecalho__conteudo h1 {
+        font-size: 25px;
+    }
+
+    .evento-resumo {
+        grid-template-columns: 1fr;
+    }
+
+    .evento-resumo__imagem {
+        width: 100%;
+        height: 180px;
+    }
+
+    .evento-resumo__prazo {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .evento-resumo__detalhes {
+        width: 100%;
+    }
+
+
+    .inscricoes-filtros {
+        grid-template-columns: 1fr;
+    }
+
+    .filtros-limpar {
+        grid-column: auto;
+    }
+
+
+    .banda-card {
+        grid-template-columns: 1fr;
+    }
+
+    .banda-card__imagem {
+        width: 100%;
+        height: 180px;
+    }
+
+    .banda-card__informacoes {
+        grid-template-columns: 1fr;
+    }
+
+    .banda-card__acoes {
+        grid-template-columns: 1fr;
+    }
+
+}
