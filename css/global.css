@@ -35,3 +35,54 @@ body {
     color: var(--cor-texto);
     font-family: Arial, sans-serif;
 }
+
+.pagina-voltar {
+    width: 100%;
+
+    padding: 0 40px;
+
+    margin-bottom: 14px;
+}
+
+.botao-voltar {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition:
+        color 0.25s,
+        transform 0.25s;
+}
+
+.botao-voltar__seta {
+    color: #5de7ff;
+
+    font-size: 19px;
+    font-weight: 800;
+
+    transition: transform 0.25s;
+}
+
+.botao-voltar:hover {
+    color: #8eeeff;
+}
+
+.botao-voltar:hover .botao-voltar__seta {
+    transform: translateX(-4px);
+}
+
+@media (max-width: 700px) {
+
+    .pagina-voltar {
+        padding: 0 18px;
+    }
+
+}

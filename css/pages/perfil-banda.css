@@ -9,35 +9,6 @@
     margin: 0 auto;
 }
 
-
-/* VOLTAR */
-
-.perfil-banda__voltar {
-    margin-bottom: 14px;
-}
-
-.perfil-banda__voltar a {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-
-    color: #c8f4ff;
-
-    text-decoration: none;
-
-    font-size: 14px;
-    font-weight: 700;
-
-    transition: 0.25s;
-}
-
-.perfil-banda__voltar a:hover {
-    color: #ffffff;
-
-    transform: translateX(-2px);
-}
-
-
 /* TOPO */
 
 .perfil-topo {
