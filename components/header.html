@@ -1,36 +1,93 @@
 <header class="header">
 
     <div class="header__logo">
+
         <a href="/index.html">
+
             <img src="/assets/logo/iconeHeadder2.png" alt="Logo Sonoraware">
+
         </a>
+
     </div>
+
 
     <div class="header__search">
+
         <input type="text" placeholder="Buscar bandas, eventos ou locais.">
+
     </div>
 
+
     <nav class="header__nav">
+
         <a href="/index.html">
             Início
         </a>
 
-        <a href="/pages/estabelecimento/minhas-solicitacoes.html">
-            Solicitações
-        </a>
 
-        <a href="/pages/banda/oportunidades.html">
-            Eventos
-        </a>
+        <div class="header__nav-dropdown">
+
+            <button type="button" class="header__nav-botao" id="solicitacoes-button" aria-expanded="false">
+                Solicitações
+                <span>▾</span>
+            </button>
+
+
+            <div class="header__nav-menu" id="solicitacoes-menu">
+
+                <a href="/pages/estabelecimento/criar-solicitacao.html">
+                    Criar solicitação
+                </a>
+
+                <a href="/pages/estabelecimento/minhas-solicitacoes.html">
+                    Minhas solicitações
+                </a>
+
+                <a href="/pages/estabelecimento/inscricoes-recebidas.html">
+                    Inscrições recebidas
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="header__nav-dropdown">
+
+            <button type="button" class="header__nav-botao" id="eventos-button" aria-expanded="false">
+                Eventos
+                <span>▾</span>
+            </button>
+
+
+            <div class="header__nav-menu" id="eventos-menu">
+
+                <a href="/pages/banda/oportunidades.html">
+                    Oportunidades
+                </a>
+
+                <a href="/pages/banda/minhas-inscricoes.html">
+                    Minhas inscrições
+                </a>
+
+            </div>
+
+        </div>
+
     </nav>
+
 
     <div class="header__acoes">
 
-        <button class="header__login" id="login-button">
+        <button type="button" class="header__login" id="login-button">
+
             <img src="/assets/icons/login.png" alt="Conta">
+
         </button>
 
+
         <div class="header__menu-login" id="login-menu">
+
             <a href="/pages/auth/login.html">
                 Entrar
             </a>
@@ -38,6 +95,7 @@
             <a href="/pages/auth/escolha-perfil.html">
                 Cadastrar
             </a>
+
         </div>
 
     </div>
