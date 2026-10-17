@@ -1,10 +1,31 @@
-fetch("/components/header.html") /* busca um recurso */
-    .then(response => response.text())
+fetch("/components/header.html")
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Não foi possível carregar o header.");
+        }
+
+        return response.text();
+    })
     .then(data => {
-        document.getElementById("header-container").innerHTML = data;
+        const headerContainer = document.getElementById("header-container");
+
+        if (!headerContainer) {
+            return;
+        }
+
+        headerContainer.innerHTML = data;
+
         const loginButton = document.getElementById("login-button");
         const loginMenu = document.getElementById("login-menu");
-        loginButton.addEventListener("click", () => {
-            loginMenu.classList.toggle("ativo");
-        });
-    }); 
+
+        if (loginButton && loginMenu) {
+            loginButton.addEventListener("click", () => {
+                loginMenu.classList.toggle("ativo");
+            });
+        }
+
+        document.dispatchEvent(new Event("headerCarregado"));
+    })
+    .catch(error => {
+        console.error("Erro ao carregar o header:", error);
+    });
