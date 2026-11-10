@@ -1,5 +1,5 @@
 body {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .perfil {
     min-height: calc(100vh - 110px);
